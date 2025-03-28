@@ -148,3 +148,21 @@ img {
         }
     }
 }
+
+
+
+
+
+
+// ============= MEDIA ===============
+
+@media(576px <= width) {
+    .nav {
+
+        &__mobile {
+            width: 400px;
+            inset-inline: initial;
+            right: 0;
+        }
+    }
+}

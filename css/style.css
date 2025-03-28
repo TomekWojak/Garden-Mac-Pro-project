@@ -234,4 +234,12 @@ img {
 .nav__mobile-icon:hover, .nav__mobile-icon:focus {
   outline: none;
   color: var(--accentColor);
+}
+
+@media (576px <= width) {
+  .nav__mobile {
+    width: 400px;
+    inset-inline: initial;
+    right: 0;
+  }
 }/*# sourceMappingURL=style.css.map */
