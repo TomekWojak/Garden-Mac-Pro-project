@@ -1,10 +1,15 @@
 @use './_animations' as *;
 
 
+
+.accent-text {
+    color: var(--accentColor);
+}
+
 .nav__toggle-btn {
     position: relative;
     display: block;
-    height: 45px;
+    height: 40px;
     width: 45px;
     background: none;
     border: none;

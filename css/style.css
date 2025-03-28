@@ -50,10 +50,14 @@
     transform: translateX(0);
   }
 }
+.accent-text {
+  color: var(--accentColor);
+}
+
 .nav__toggle-btn {
   position: relative;
   display: block;
-  height: 45px;
+  height: 40px;
   width: 45px;
   background: none;
   border: none;
@@ -142,7 +146,7 @@ img {
 .nav {
   position: sticky;
   top: 0;
-  padding: 1em;
+  padding: 0.5em 1em;
   background-color: var(--pureWhite);
   z-index: 1000;
 }
@@ -168,7 +172,7 @@ img {
   display: flex;
   inset-inline: 0;
   bottom: 0;
-  top: 9em;
+  top: 8em;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -180,6 +184,8 @@ img {
   background-color: rgba(255, 255, 255, 0.8);
   transition: transform 0.4s, visibility 0.4s;
   visibility: hidden;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
 }
 .nav__mobile.collapsed {
   transform: translateX(0);
@@ -237,6 +243,43 @@ img {
 .nav__mobile-icon:hover, .nav__mobile-icon:focus {
   outline: none;
   color: var(--accentColor);
+}
+
+.header__bg {
+  position: relative;
+}
+.header__bg img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.header__bg--wood, .header__bg--leaves, .header__bg--painting {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.header__bg--wood {
+  background: url("../images/wood-blurred.jpg");
+}
+.header__bg--leaves {
+  background: url("../images/leaves-blurred.jpg");
+}
+.header__bg--painting {
+  background: url("../images/painting-blurred.jpg");
+}
+.header__bg::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.header__bg--desktop-visible {
+  display: none;
 }
 
 @media (min-width: 576px) {
@@ -298,5 +341,11 @@ img {
 @media (min-width: 992px) {
   .nav__desktop {
     margin-inline-start: 5em;
+  }
+  .header__bg--desktop-visible {
+    display: block;
+  }
+  .header__bg--mobile-visible {
+    display: none;
   }
 }/*# sourceMappingURL=style.css.map */

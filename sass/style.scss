@@ -45,7 +45,7 @@ img {
 .nav {
     position: sticky;
     top: 0;
-    padding: 1em;
+    padding: .5em 1em;
     background-color:var(--pureWhite);
     z-index: 1000;
 
@@ -75,7 +75,7 @@ img {
         display: flex;
         inset-inline: 0;
         bottom: 0;
-        top: 9em;
+        top: 8em;
         flex-direction: column;
         align-items: center;
         justify-content: center;
@@ -87,6 +87,7 @@ img {
         background-color: rgba(255, 255, 255, 0.8);
         transition: transform .4s, visibility .4s;
         visibility: hidden;
+        backdrop-filter: blur(5px);
 
 
         &.collapsed {
@@ -153,6 +154,50 @@ img {
     }
 }
 
+
+// HEADER 
+
+.header {
+
+    &__bg {
+        position: relative;
+
+        img {
+            width: 100%;
+            height:100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        &--wood, &--leaves, &--painting {
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        &--wood {
+            background: url('../images/wood-blurred.jpg');
+        }
+        &--leaves {
+            background: url('../images/leaves-blurred.jpg');
+        }
+        &--painting{
+            background: url('../images/painting-blurred.jpg');
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            inset: 0;
+            background-color: rgba(0, 0, 0, .6);
+        }
+
+        &--desktop-visible {
+            display: none;
+        }
+    }
+}
 
 
 
@@ -230,6 +275,19 @@ img {
 
         &__desktop {
             margin-inline-start: 5em;
+        }
+    }
+
+    .header {
+
+        &__bg {
+
+            &--desktop-visible {
+                display: block;
+            }
+            &--mobile-visible {
+                display: none;
+            }
         }
     }
 }
