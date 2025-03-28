@@ -142,7 +142,7 @@ img {
 .nav {
   position: sticky;
   top: 0;
-  padding: clamp(1em, 4vw, 1em);
+  padding: 1em;
   background-color: var(--pureWhite);
   z-index: 1000;
 }
@@ -155,6 +155,8 @@ img {
   text-decoration: none;
 }
 .nav__logo img {
+  min-width: 70px;
+  min-height: 70px;
   aspect-ratio: 1;
   background-color: var(--pureWhite);
 }
@@ -164,9 +166,9 @@ img {
 .nav__mobile {
   position: fixed;
   display: flex;
-  top: 9em;
   inset-inline: 0;
   bottom: 0;
+  top: 9em;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -191,6 +193,7 @@ img {
   text-decoration: none;
   color: var(--pureBlack);
   font-weight: 300;
+  letter-spacing: 2px;
 }
 .nav__mobile-link:hover::before, .nav__mobile-link:focus::before {
   transform: translateX(-50%) scale(1);
@@ -236,10 +239,64 @@ img {
   color: var(--accentColor);
 }
 
-@media (576px <= width) {
+@media (min-width: 576px) {
   .nav__mobile {
     width: 400px;
-    inset-inline: initial;
-    right: 0;
+    inset: 0;
+    inset-inline-start: initial;
+    box-shadow: 5px 5px 10px rgba(46, 46, 46, 0.1803921569);
+  }
+}
+@media (min-width: 700px) {
+  .nav {
+    box-shadow: 5px 5px 10px rgba(46, 46, 46, 0.031372549);
+  }
+  .nav .wrapper {
+    justify-content: flex-start;
+  }
+  .nav__toggle-btn {
+    display: none;
+  }
+  .nav__mobile {
+    display: none;
+  }
+  .nav__desktop {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+  }
+  .nav__desktop-link {
+    position: relative;
+    display: inline-block;
+    padding: 1em 2em;
+    font-size: 2rem;
+    text-decoration: none;
+    color: var(--pureBlack);
+    font-weight: 300;
+    letter-spacing: 2px;
+    transition: color 0.3s;
+  }
+  .nav__desktop-link:hover::before {
+    transform: translateX(-50%) scale(1);
+  }
+  .nav__desktop-link:hover {
+    color: var(--accentColor);
+  }
+  .nav__desktop-link::before {
+    content: "";
+    position: absolute;
+    width: 40%;
+    left: 50%;
+    transform: translateX(-50%) scale(0);
+    transform-origin: center;
+    bottom: 0.8em;
+    height: 1px;
+    background-color: var(--accentColor);
+    transition: transform 0.3s;
+  }
+}
+@media (min-width: 992px) {
+  .nav__desktop {
+    margin-inline-start: 5em;
   }
 }/*# sourceMappingURL=style.css.map */

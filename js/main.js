@@ -19,6 +19,10 @@ navbarToggler.addEventListener('click', () => {
         navMobile.setAttribute('inert', 'true')
         navMobile.setAttribute('aria-expanded', 'false')
         navMobile.classList.remove('collapsed')
+
+        setTimeout(() => {
+            navbarToggler.classList.remove('closed')
+        }, 500)
     }
 
     navMobileLinks.forEach(link => link.addEventListener('click', () => {
@@ -28,6 +32,9 @@ navbarToggler.addEventListener('click', () => {
         navMobile.classList.remove('collapsed')
         navMobile.setAttribute('inert', 'true')
         link.classList.remove('animation')
+        setTimeout(() => {
+            navbarToggler.classList.remove('closed')
+        }, 500)
     }))
 
     handleNavItemsAnimation()
