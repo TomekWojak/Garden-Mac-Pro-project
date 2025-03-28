@@ -1,0 +1,54 @@
+@use './_animations' as *;
+
+
+.nav__toggle-btn {
+    position: relative;
+    display: block;
+    height: 45px;
+    width: 45px;
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    &.closed .nav__toggle-bar--top {
+        animation: topCloseAnimation .3s forwards;
+    }
+    &.closed .nav__toggle-bar--middle {
+        opacity: 1;
+    }
+    &.closed .nav__toggle-bar--bottom {
+        animation: bottomCloseAnimation .3s forwards;
+    }
+}
+
+.nav__toggle-bar {
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    left: 0;
+    background-color: var(--lightGray);
+    border-radius: 30px;
+
+    &--top {
+        top: 8px;
+    }
+    &--middle {
+        top: 21px;
+        transition: opacity .3s;
+    }
+    &--bottom {
+        top: 34px;
+    }
+}
+
+
+
+.nav__toggle-btn[aria-expanded='true'] .nav__toggle-bar--top {
+    animation: topOpenAnimation .3s forwards;
+}
+.nav__toggle-btn[aria-expanded='true'] .nav__toggle-bar--middle {
+    opacity: 0;
+}
+.nav__toggle-btn[aria-expanded='true'] .nav__toggle-bar--bottom {
+    animation: bottomOpenAnimation .3s forwards;
+}

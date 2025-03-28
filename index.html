@@ -8,8 +8,36 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="./css/style.css">
+<script src="https://kit.fontawesome.com/cdbdae0066.js" crossorigin="anonymous"></script>
 </head>
 <body>
     
+<nav class="nav">
+    <div class="wrapper">
+        <a href="index.html" class="nav__logo">
+            <img src="./images/logo.png" width="70" height="70" alt="Logo strony XYZ">
+        </a>
+
+        <button class="nav__toggle-btn" aria-expanded="false" aria-controls="mobile-navigation" aria-label="Przycisk kontrolujący nawigację boczną">
+            <span class="nav__toggle-bar nav__toggle-bar--top"></span>
+            <span class="nav__toggle-bar nav__toggle-bar--middle"></span>
+            <span class="nav__toggle-bar nav__toggle-bar--bottom"></span>
+        </button>
+
+        <ul class="nav__mobile" id="mobile-navigation" aria-label="Nawigacja boczna" aria-expanded="false" inert="true">
+            <li class="nav__mobile-item"><a href="#services" class="nav__mobile-link">Usługi</a></li>
+            <li class="nav__mobile-item"><a href="#contact" class="nav__mobile-link">Kontakt</a></li>
+            <li class="nav__mobile-item"><a href="#about" class="nav__mobile-link">O nas</a></li>
+
+            <div class="nav__mobile-social">
+                <a href="#" class="nav__mobile-icon"><i class="fa-brands fa-square-facebook"></i></a>
+                <a href="#" class="nav__mobile-icon"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </ul>
+
+    </div>
+</nav>
+
+<script src="./js/main.js"></script>
 </body>
 </html>
