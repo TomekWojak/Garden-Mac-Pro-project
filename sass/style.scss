@@ -44,6 +44,7 @@ img {
 
 .nav {
     position: sticky;
+    width: 100%;
     top: 0;
     padding: .5em 1em;
     background-color:var(--pureWhite);
@@ -73,6 +74,7 @@ img {
     &__mobile {
         position: fixed;
         display: flex;
+        height: 100vh;
         inset-inline: 0;
         bottom: 0;
         top: 6em;
@@ -106,9 +108,7 @@ img {
         letter-spacing: 2px;
 
 
-        &:hover::before, &:focus::before {
-            transform: translateX(-50%) scale(1);
-        }
+
         &:focus {
             outline: none;
             color: var(--accentColor);
@@ -117,18 +117,7 @@ img {
             animation: slideLeft .4s both;
         }
 
-        &::before {
-            content: '';
-            position: absolute;
-            width: 30%;
-            bottom: .6em;
-            left: 50%;
-            transform: translateX(-50%) scale(0);
-            height: 2px;
-            background-color: var(--accentColor);
-            transform-origin: center;
-            transition: transform .3s;
-        }
+
     }
     &__mobile-social {
         display: flex;
@@ -159,6 +148,9 @@ img {
 
 .header {
     position: relative;
+
+
+    
     &__bg {
         position: relative;
 
@@ -202,6 +194,7 @@ img {
     &__content {
         position: absolute;
         width: 100%;
+        max-width: 1200px;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -234,24 +227,30 @@ img {
         border: 2px solid transparent;
         letter-spacing: 2px;
         font-weight: 500;
-        font-size: clamp(1.1rem, 2vw, 1.4rem);
+        font-size: clamp(1.1rem, 2vw, 1.2rem);
         text-transform: uppercase;
         filter: drop-shadow(5px 5px 10px #2e2e2e2e);
         text-shadow: 3px 3px 5px #2e2e2e2e;
-        transition: background .3s, border .3s;
+        transition: background .3s, border .3s, transform .3s;
 
-        &:hover {
+        &:hover, &:focus-visible {
             background: none;
             border: 2px solid var(--accentColor);
+            outline: none;
+        }
+        &:active {
+            transform: scale(.95);
         }
     }
 
     &__box {
-
         margin: 2em 0;
 
         img {
             display: inline-block;
+            aspect-ratio: 1;
+            min-width: 17px;
+            min-height: 17px;
             filter: drop-shadow(5px 5px 10px #2e2e2e2e);
         }
 
@@ -270,13 +269,17 @@ img {
 
 // ============= MEDIA ===============
 
+
+
 @media(min-width: 576px) {
     .nav {
 
         &__mobile {
             width: 400px;
-            inset: 0;
-            inset-inline-start: initial;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: initial;
             box-shadow: 5px 5px 10px #2e2e2e2e;
         }
     }
@@ -285,10 +288,18 @@ img {
 @media(min-width: 700px) {
 
     .nav{
+        padding: 0 1em;
         box-shadow: 5px 5px 10px #2e2e2e08;
         .wrapper {
             justify-content: flex-start;
         }
+        &__logo img {
+            width: 75px;
+            height: 75px;
+        }
+            
+      
+
 
         &__toggle-btn {
             display: none;
@@ -312,11 +323,12 @@ img {
             letter-spacing: 2px;
             transition: color .3s;
 
-            &:hover::before {
+            &:hover::before, &:focus-visible::before {
                 transform: translateX(-50%) scale(1);
             }
-            &:hover {
+            &:hover, &:focus-visible {
                 color: var(--accentColor);
+                outline: none;
             }
             &::before {
                 content: '';
@@ -332,19 +344,92 @@ img {
             }
         }
     }
+
+    .header {
+        display: flex;
+        height: 80vh;
+
+        &__content {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+        &__title {
+            font-size: 3.4rem;
+        }
+
+        &__text {
+            width: 50%;
+            text-align: left;
+        }
+        &__info {
+            width: 48%;
+        }
+        &__box:first-child {
+            margin: 0 0 2em;
+        }
+
+        &__info-text {
+            font-size: 1.8rem;
+        }
+        &__btn {
+            margin: 2em 0 0;
+        }
+        
+    }
 }
 
 
-@media(min-width: 992px) {
-    .nav {
-
-        &__desktop {
-            margin-inline-start: 5em;
-        }
-    }
-
+@media(min-width: 768px) {
     .header {
 
+        &__info-text {
+            display: inline-block;
+            padding-inline-start: .3em;
+        }
+        &__info {
+            display: flex;
+            flex-direction: column;
+        }
+        &__box {
+            text-align: left;
+            margin: 0;
+
+            &:first-child {
+                margin: 0 0 3em 1.5em;
+            }
+            &:last-child {
+                margin: 3em 0 0 1.5em;
+            }
+        }
+
+    }
+}
+
+@media(min-width: 800px){
+    .header {
+
+        &__title {
+            font-size: 4rem;
+        }
+        &__info-text {
+            font-size: 2rem;
+        }
+        &__box {
+
+            &:first-child {
+                margin: 0 0 4em 1.5em;
+            }
+            &:last-child {
+                margin: 4em 0 0 1.5em;
+            }
+        }
+    }
+}
+
+@media(min-width: 992px) {
+
+    .header {
         &__bg {
 
             &--desktop-visible {
@@ -354,5 +439,78 @@ img {
                 display: none;
             }
         }
+
+        &__title {
+            font-size: 4.4rem;
+            line-height: 160%;
+
+            &:nth-child(2) {
+                margin-inline-start: 3em;
+            }
+            &:nth-child(3) {
+                margin-inline-start: 4em;
+            }
+        }
+
+        &__btn {
+            position: relative;
+            align-self: flex-end;
+            margin: 2em 10em 0 0;
+            font-size: 1.3rem;
+            overflow: hidden;
+            z-index: 0;
+
+            &:hover::before {
+                animation: flash .6s .1s;
+             }
+             &::before {
+                 content: '';
+                 position: absolute;
+                 left: -30%;
+                 transform: translateY(-50px) rotate(30deg);
+                 height: 200%;
+                 width: 30px;
+                 background: linear-gradient(90deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+                 transition: transform .2s .1s;
+                 z-index: -1;
+             }
+        }
+ 
+
+        &__text {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        &__info {
+            width: 42%;
+        }
+        &__info-text {
+            font-size: 2.2rem;
+        }
+        &__box {
+            img {
+                margin-inline-start: .4em;
+            }
+            &:first-child {
+                margin: 0 0 4em 2em;
+            }
+            &:last-child {
+                margin: 4em 0 0 2em;
+            }
+        }
     }
 }
+
+
+@media(min-width: 1200px) {
+    .header {
+        &__title {
+            font-size: 5rem;
+        }
+        &__info-text {
+            font-size: 2.4rem;
+        }
+    }
+}
+

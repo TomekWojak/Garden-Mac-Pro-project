@@ -55,3 +55,16 @@
         transform: translateX(0);
     }
 }
+
+@keyframes flash {
+    0% {
+        transform: translateY(-50px) rotate(30deg);
+    }
+    50% {
+        transform: translate(300px) rotate(30deg);
+    }
+    100% {
+        transform: translate(300px) rotate(30deg);
+        display: none;
+    }
+}
