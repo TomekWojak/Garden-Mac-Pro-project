@@ -33,6 +33,7 @@ img {
     max-width: 100%;
     display: block;
     font-style: italic;
+    color: var(--pureWhite);
 }
 
 .wrapper {
@@ -153,6 +154,9 @@ img {
     
     &__bg {
         position: relative;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
 
         img {
             width: 100%;
@@ -161,19 +165,15 @@ img {
             object-position: center;
         }
 
-        &--wood, &--leaves, &--painting {
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-        }
+
         &--wood {
-            background: url('../images/wood-blurred.jpg');
+            background-image: url('../images/wood-blurred.jpg');
         }
         &--leaves {
-            background: url('../images/leaves-blurred.jpg');
+            background-image: url('../images/leaves-blurred.jpg');
         }
         &--painting{
-            background: url('../images/painting-blurred.jpg');
+            background-image: url('../images/painting-blurred.jpg');
         }
 
         &::before {
@@ -185,9 +185,7 @@ img {
             background-color: rgba(0, 0, 0, .65);
         }
 
-        &--desktop-visible {
-            display: none;
-        }
+
     }
 
 
@@ -430,15 +428,6 @@ img {
 @media(min-width: 992px) {
 
     .header {
-        &__bg {
-
-            &--desktop-visible {
-                display: block;
-            }
-            &--mobile-visible {
-                display: none;
-            }
-        }
 
         &__title {
             font-size: 4.4rem;

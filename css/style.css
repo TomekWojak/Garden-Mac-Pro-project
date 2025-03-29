@@ -147,6 +147,7 @@ img {
   max-width: 100%;
   display: block;
   font-style: italic;
+  color: var(--pureWhite);
 }
 
 .wrapper {
@@ -249,6 +250,9 @@ img {
 }
 .header__bg {
   position: relative;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .header__bg img {
   width: 100%;
@@ -258,19 +262,14 @@ img {
   -o-object-position: center;
      object-position: center;
 }
-.header__bg--wood, .header__bg--leaves, .header__bg--painting {
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
 .header__bg--wood {
-  background: url("../images/wood-blurred.jpg");
+  background-image: url("../images/wood-blurred.jpg");
 }
 .header__bg--leaves {
-  background: url("../images/leaves-blurred.jpg");
+  background-image: url("../images/leaves-blurred.jpg");
 }
 .header__bg--painting {
-  background: url("../images/painting-blurred.jpg");
+  background-image: url("../images/painting-blurred.jpg");
 }
 .header__bg::before {
   content: "";
@@ -279,9 +278,6 @@ img {
   height: 100%;
   inset: 0;
   background-color: rgba(0, 0, 0, 0.65);
-}
-.header__bg--desktop-visible {
-  display: none;
 }
 .header__content {
   position: absolute;
@@ -476,12 +472,6 @@ img {
   }
 }
 @media (min-width: 992px) {
-  .header__bg--desktop-visible {
-    display: block;
-  }
-  .header__bg--mobile-visible {
-    display: none;
-  }
   .header__title {
     font-size: 4.4rem;
     line-height: 160%;
