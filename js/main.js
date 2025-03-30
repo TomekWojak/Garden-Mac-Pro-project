@@ -2,6 +2,7 @@
 const navbarToggler = document.querySelector('.nav__toggle-btn')
 const navMobile = document.getElementById('mobile-navigation')
 const navMobileLinks = document.querySelectorAll('.nav__mobile-link')
+const nav = document.querySelector('.nav')
 
 navbarToggler.addEventListener('click', () => {
     const isOpened = navbarToggler.getAttribute('aria-expanded')
@@ -48,3 +49,10 @@ const handleNavItemsAnimation = () => {
         delayTime++
     })
 }
+
+
+const handleNavDesktop = () => {
+    nav.classList.toggle("shrink", window.scrollY > 700 && window.innerWidth >= 700);
+}
+
+window.addEventListener('scroll', handleNavDesktop)
