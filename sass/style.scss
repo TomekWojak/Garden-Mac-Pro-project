@@ -17,6 +17,8 @@
     --aboutServicesBg: #F4F1EA;
     --aboutBg: linear-gradient(to bottom, #DCE4E8 0%, #E1E1E1 100%);
     --contactBg: #F0F0F0;
+    --mainFont: 'Oswald', sans-serif;
+    --secondaryFont: 'Roboto', sans-serif;
 }
 
 html {
@@ -25,7 +27,7 @@ html {
 }
 
 body {
-    font-family: 'Oswald', sans-serif;
+    font-family: var(--mainFont);
     overflow-x: hidden;
 }
 
@@ -128,7 +130,6 @@ img {
         padding: 2em;
         margin-block-start: 5em;
         width: min(300px, 80%);
-        gap: 3em;
         border-top: 2px solid var(--accentColor);
     }
     &__mobile-icon {
@@ -285,6 +286,10 @@ img {
         font-weight: 350;
         letter-spacing: 2px;
     }
+    &__box-data {
+        letter-spacing: 1px;
+        font-weight: 300;
+    }
     &__box-title {
         text-transform: uppercase;
     }
@@ -293,18 +298,45 @@ img {
         display: inline-block;
         text-decoration: none;
         font-size: 2.2rem;
-
-        &:first-child {
-            color: #1E90FF;
-        }
-        &:last-child {
-            color: #FF1493;
-            margin-inline-end: 0;
-        }
+        color: #1E90FF;
     }
 
 }
 
+
+// ABOUT SECTIO
+
+.about {
+    background-image: var(--aboutBg);
+    text-align: center;
+    position: relative;
+
+
+    &.section-padding {
+        padding: 8em 2em 15em;
+    }
+
+    &__info {
+        margin: 5em 0;
+    }
+    &__info-icon {
+        color: var(--accentColor);
+        font-size: 2.1rem;
+    }
+    &__info-title {
+        margin: .5em 0;
+        font-size: 1.8rem;
+        font-weight: normal;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+    &__info-text {
+        font-size: 1.5rem;
+        font-weight: 300;
+        font-family: var(--secondaryFont);
+        line-height: 150%;
+    }
+}
 
 
 // FOOTER
@@ -314,7 +346,7 @@ img {
     border-top: 1px solid var(--pureBlack);
     background-color: var(--contactBg);
     text-align: center;
-    font-family: 'Roboto', sans-serif;
+    font-family: var(--secondaryFont);
 
     &__text {
         font-size: 1.3rem;
@@ -352,12 +384,26 @@ img {
             font-size: 2.6rem;
         }
     }
+
+    .about {
+
+        &__info-title {
+            font-size: 2.1rem;
+        }
+        &__info-text {
+            font-size: 1.7rem;
+        }
+        &__info-icon {
+            font-size: 2.3rem;
+        }
+    }
 }
 
 @media(min-width: 700px) {
 
     .nav{
         padding: 0 1em;
+        box-shadow: 5px 5px 10px #2e2e2e13;
 
         .wrapper {
             justify-content: flex-start;
@@ -370,28 +416,6 @@ img {
         &__desktop-link {
             transition: padding .1s, color .3s;
         }
-
-        &.shrink {
-            box-shadow: 5px 5px 10px #2e2e2e11;
-        }        
-        &.shrink .nav__desktop-link {
-            padding: 0.5em 2em;
-            font-size: 1.5rem;
-            transition: padding .2s, color .2s;
-
-            &::before {
-                display: none;
-            }
-        }
-        &.shrink .nav__logo img {
-            width: 60px;
-            height: 60px;
-            min-width: 60px;
-            min-height: 60px;
-            transition: height .2s ease-out, width .2s ease-out;
-        }
-          
-
 
         &__toggle-btn {
             display: none;
@@ -470,6 +494,27 @@ img {
         
     }
 
+    .about {
+
+        &.section-padding {
+            padding: 10em 2em 20em;
+        }
+        .section-title {
+            margin: 0 0 2em;
+        }
+
+        &__box {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        &__info {
+            width: 45%;
+            margin: 5em 1em;
+        }
+    }
+
 
 }
 
@@ -511,11 +556,53 @@ img {
         &__box-title, &__box-data {
             font-size: 1.8rem;
         }
-        &__box-social {
-            align-self: center;
-        }
+
         &__box-icon {
+            position: relative;
             font-size: 2.4rem;
+            transition: color .3s;
+
+            &:hover {
+                color: #0e7cea;
+            }
+        &:hover::before, &:hover::after {
+            opacity: 1;
+            transform: translate(-50%, 0);
+            transition: opacity .3s .2s, transform .3s .2s cubic-bezier(0.25, 0.1, 0.12, 1.73);
+        }   
+
+            &::before {
+                content: 'Facebook';
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                bottom: -3.6em;
+                left: 50%;
+                transform: translate(-50%, 20px);
+                width: 80px;
+                height: 30px;
+                opacity: 0;
+                background-color: #0e7cea;
+                font-size: 1.2rem;
+                font-family: var(--secondaryFont);
+                color: var(--pureWhite);
+                border-radius: 5px;
+                letter-spacing: 1px;
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: -.5em;
+                left: 50%;
+                transform: translate(-50%, 20px);
+                width: 0; 
+                height: 0; 
+                opacity: 0;
+                border-left: 6px solid transparent;
+                border-right: 6px solid transparent;
+                border-bottom: 12px solid #0e7cea;
+            }
         }
 
     }
@@ -546,6 +633,21 @@ img {
         &__box-title {
             font-size: 2rem;
         }
+        &__box-icon {
+            align-self: center;
+            font-size: 2.7rem;
+        }
+    }
+
+    .about {
+
+        &__info-icon {
+            font-size: 2.6rem;
+        }
+        &__info-title {
+            font-size: 2.3rem;
+        }
+
     }
 }
 
@@ -619,9 +721,33 @@ img {
         &__box-title, &__box-data {
             font-size: 2.4rem;
         }
+        &__box-icon {
+            font-size: 2.9rem;
+        }
+    }
+
+    .about {
+
+        &__info {
+            width: 30%;
+        }
     }
 }
 
+@media(min-width: 1100px) {
+    .about {
+
+        &__info-icon {
+            font-size: 3rem;
+        }
+        &__info-title {
+            font-size: 2.6rem;
+        }
+        &__info-text {
+            font-size: 1.8rem;
+        }
+    }
+}
 
 @media(min-width: 1200px) {
     .header {
