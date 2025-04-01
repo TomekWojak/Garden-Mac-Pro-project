@@ -9,7 +9,7 @@
 
 
 :root {
-    --accentColor: #D32F2F;
+    --accentColor: #ce2e2e;
     --pureWhite: #fff;
     --lightGray: #555555;
     --pureBlack: #000;
@@ -401,6 +401,7 @@ img {
             height: auto;
             inset: 0;
             background-color: rgba(0, 0, 0, .4);
+            z-index: 10;
         }
 
         img {
@@ -415,17 +416,14 @@ img {
         text-align: center;
         font-family: var(--secondaryFont);
         font-size: 1.25rem;
-
-        &:nth-of-type(2) {
-            color: #333;
-        }
         
         .accent-text {
-            font-weight: 600;
+            font-weight: 650;
+            color: #9a2222;
         }
     }
     &__link {
-        color: var(--accentColor);
+        color: #9a2222;
         text-decoration: none;
         
         &:hover, &:focus-visible {
@@ -716,7 +714,7 @@ img {
 
 
         &.section-padding {
-            padding: 8em 2em 25em;
+            padding: 10em 2em 25em;
         }
 
         &__content {
@@ -1094,6 +1092,9 @@ img {
     }
 
     .services {
+        &.section-padding {
+            padding: 14em 2em 25em;
+        }
 
         .section-title {
             font-size: 3.4rem;
@@ -1120,6 +1121,16 @@ img {
         &__content::before {
             height: 3px;
             width: 130px;
+        }
+        &__img {
+            overflow: hidden;
+
+            &:hover img {
+                transform: scale(1.2);
+            }
+            img {
+                transition: transform .3s;
+            }
         }
     }
 
