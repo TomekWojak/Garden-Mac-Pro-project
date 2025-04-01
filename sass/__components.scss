@@ -2,6 +2,13 @@
 
 
 
+@mixin bgProperties {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .accent-text {
     color: var(--accentColor);
 }

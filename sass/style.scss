@@ -14,7 +14,7 @@
     --lightGray: #555555;
     --pureBlack: #000;
     --servicesBg: #F2F2F2;
-    --aboutServicesBg: #F4F1EA;
+    --offersBg: #F4F1EA;
     --aboutBg: linear-gradient(to bottom, #DCE4E8 0%, #E1E1E1 100%);
     --contactBg: #F0F0F0;
     --mainFont: 'Oswald', sans-serif;
@@ -158,10 +158,7 @@ img {
 
     
     &__bg {
-        position: relative;
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
+        @include bgProperties;
 
         img {
             width: 100%;
@@ -271,7 +268,7 @@ img {
 // SERVICES SECTION
 
 .services {
-
+    overflow: hidden;
     position: relative;
 
     &.section-padding {
@@ -285,13 +282,10 @@ img {
         display: none;
     }
     &__img {
-        position: relative;
         margin-block-end: 4em;
         filter: drop-shadow(5px 5px 10px #2e2e2e2e);
         background-image: url('../images/services-img-blurred.jpg');
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
+        @include bgProperties;
 
         &::before {
             content: '';
@@ -337,6 +331,124 @@ img {
         font-size: 1.8rem;
         text-transform: uppercase;
         letter-spacing: 2px;
+    }
+
+}
+
+
+// OFFERS SECTION
+
+.offers {
+    position: relative;
+    background-color: var(--offersBg);
+
+    .divider {
+        width: 50%;
+        max-width: 500px;
+        margin: 2em auto;
+        height: 1px;
+    }
+    .line {
+        bottom: initial;
+        top: -119px;
+    }
+
+    &.section-padding {
+        padding: 10em 2em 4em;
+    }
+    
+
+    &__offer {
+        margin: 10em 0;
+
+        &:first-child {
+            margin: 0;
+        }
+        &:last-child {
+            margin: 10em 0 5em;
+        }
+    }
+
+    &__img {
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 5px 5px 10px #2e2e2e2e;
+        @include bgProperties;
+
+        &--mowing {
+            background-image: url('../images/mowing-blurred.jpg');
+        }
+        &--rake {
+            background-image: url('../images/rake-blurred.jpg');
+        }
+        &--wood {
+            background-image: url('../images/wood-work-blurred.jpg');
+        }
+        &--garden {
+            background-image: url('../images/garden-work-blurred.jpg');
+        }
+        &--brush {
+            background-image: url('../images/brush-blurred.jpg');
+        }
+        &--paving {
+            background-image: url('../images/paving-blurred.jpg');
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: auto;
+            inset: 0;
+            background-color: rgba(0, 0, 0, .4);
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+    &__info {
+        margin-block-end: 1em;
+        text-align: center;
+        font-family: var(--secondaryFont);
+        font-size: 1.25rem;
+
+        &:nth-of-type(2) {
+            color: #333;
+        }
+        
+        .accent-text {
+            font-weight: 600;
+        }
+    }
+    &__link {
+        color: var(--accentColor);
+        text-decoration: none;
+        
+        &:hover, &:focus-visible {
+            text-decoration: underline;
+        }
+    }
+    &__content {
+        padding: 2em 0;
+    }
+    &__title {
+        margin-block-end: 1em;
+        font-size: 2rem;
+        font-weight: normal;
+        letter-spacing: 1px;
+
+        .accent-text {
+            font-weight: 600;
+        }
+    }
+    &__text {
+        font-size: 1.4rem;
+        font-family: var(--secondaryFont);
+        line-height: 150%;
     }
 
 }
@@ -403,6 +515,12 @@ img {
     &__box-data {
         letter-spacing: 1px;
         font-weight: 300;
+        color: var(--pureBlack);
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
     }
     &__box-title {
         text-transform: uppercase;
@@ -465,6 +583,26 @@ img {
         }
         &__content {
             padding: 2em;
+        }
+    }
+
+
+    .offers {
+        &.section-padding {
+            padding: 10em 2em 5em;
+        }
+
+        .divider {
+            margin: 6em auto 3em;
+        }
+        &__title {
+            font-size: 2.6rem;
+        }
+        &__text {
+            font-size: 1.65rem;
+        }
+        &__info {
+            font-size: 1.3rem;
         }
     }
 
@@ -533,25 +671,11 @@ img {
             letter-spacing: 2px;
             transition: color .3s;
 
-            &:hover::before, &:focus-visible::before {
-                transform: translateX(-50%) scale(1);
-            }
             &:hover, &:focus-visible {
                 color: var(--accentColor);
                 outline: none;
             }
-            &::before {
-                content: '';
-                position: absolute;
-                width: 40%;
-                left: 50%;
-                transform: translateX(-50%) scale(0);
-                transform-origin: center;
-                bottom: .8em;
-                height: 1px;
-                background-color: var(--accentColor);
-                transition: transform .3s;
-            }
+
         }
     }
 
@@ -590,6 +714,7 @@ img {
 
     .services {
 
+
         &.section-padding {
             padding: 8em 2em 25em;
         }
@@ -611,7 +736,21 @@ img {
         }
     }
 
+    .offers {
 
+        &.section-padding {
+            padding: 14em 2em 6em;
+        }
+        &__offer {
+            margin: 12em 0;
+        }
+        &__title {
+            font-size: 2.8rem;
+        }
+        &__text {
+            font-size: 1.8rem;
+        }
+    }
 
     .about {
 
@@ -704,6 +843,55 @@ img {
         }
     }
 
+
+    .offers {
+
+        .divider {
+            transform: rotate(0);
+            margin: 10em auto 3em;
+        }
+        &__info {
+            font-size: 1.4rem;
+        }
+
+        &__offer {
+            display: flex;
+            margin: 15em 0;
+            
+            &:nth-child(even) .offers__img {
+                order: 1;
+            }
+        }
+        &__img {
+            width: 50%;
+            min-height: 286px;
+            max-height: 340px;
+
+            img {
+                height: 100%;
+            }
+        }
+        &__content {
+            position: relative;
+            width: 50%;
+            padding: 2em;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                width: 100px;
+                height: 2px;
+                background-color: var(--accentColor);
+            }
+        }
+        &__title {
+            font-size: 2.1rem;
+        }
+        &__text {
+            font-size: 1.55rem;
+        }
+    }
 
 
     .contact {
@@ -826,6 +1014,20 @@ img {
     }
 }
 
+@media(min-width: 900px) {
+    .offers {
+        &__content {
+            padding: 3em;
+        }
+        &__title {
+            font-size: 2.5rem;
+        }
+        &__text {
+            font-size: 1.7rem;
+        }
+    }
+}
+
 @media(min-width: 992px) {
 
     .header {
@@ -895,9 +1097,29 @@ img {
 
         .section-title {
             font-size: 3.4rem;
+            margin: 0 0 1.5em;
         }
         &__content {
             padding: 2em 6em;
+        }
+    }
+
+    .offers {
+
+        .line {
+            top: -137.5px;
+        }
+
+        &__title {
+            font-size: 2.8rem;
+        }
+        &__text {
+            font-size: 1.6rem;
+            line-height: 160%;
+        }
+        &__content::before {
+            height: 3px;
+            width: 130px;
         }
     }
 
@@ -941,6 +1163,26 @@ img {
         }
         &__text {
             font-size: 2.4rem;
+        }
+    }
+
+    .offers {
+        .divider {
+            margin: 14em auto 3em;
+        }
+        &__info {
+            font-size: 1.6rem;
+        }
+        &.section-padding {
+            padding: 18em 2em 8em;
+        }
+
+        &__content {
+            padding: 4em;
+        }
+        &__text {
+            font-size: 1.8rem;
+            line-height: 170%;
         }
     }
 }
