@@ -9,7 +9,7 @@
 
 
 :root {
-    --accentColor: #ce2e2e;
+    --accentColor: #D32F2F;
     --pureWhite: #fff;
     --lightGray: #555555;
     --pureBlack: #000;
@@ -56,7 +56,17 @@ img {
     box-shadow: 5px 5px 10px #2e2e2e13;
     z-index: 1000;
 
+    &.shrink .nav__logo img {
+        width: 55px;
+        height: 55px;
+        min-width: 55px;
+        min-height: 55px;
+    }
+    &.shrink .nav__desktop-link {
+        padding: 0.5em 2em;
+        font-size: 1.5rem;
 
+    }
     .wrapper {
         display: flex;
         justify-content: space-between;
@@ -154,7 +164,7 @@ img {
 
 .header {
     position: relative;
-
+    overflow: hidden;
 
     
     &__bg {
@@ -215,6 +225,7 @@ img {
     }
     &__title {
         font-size: clamp(2.8rem, 8vw, 4.8rem);
+        display: inline-block;
     }
     &__btn {
         display: inline-block;
@@ -231,15 +242,12 @@ img {
         text-transform: uppercase;
         filter: drop-shadow(5px 5px 10px #2e2e2e2e);
         text-shadow: 3px 3px 5px #2e2e2e2e;
-        transition: background .3s, border .3s, transform .3s;
+        transition: background .3s, border .3s, opacity .6s .6s ease, transform .6s .6s ease !important;
 
         &:hover, &:focus-visible {
             background: none;
             border: 2px solid var(--accentColor);
             outline: none;
-        }
-        &:active {
-            transform: scale(.95);
         }
     }
 
@@ -418,7 +426,7 @@ img {
         font-size: 1.25rem;
         
         .accent-text {
-            font-weight: 650;
+            font-weight: 600;
             color: #9a2222;
         }
     }
@@ -641,10 +649,10 @@ img {
         &__logo img {
             width: 75px;
             height: 75px;
-            transition: height .1s ease-out, width .1s ease-out;
+            transition: height .2s ease-out, width .2s ease-out;
         }
         &__desktop-link {
-            transition: padding .1s, color .3s;
+            transition: padding .2s ease-out, color .3s;
         }
 
         &__toggle-btn {
@@ -1043,27 +1051,10 @@ img {
         }
 
         &__btn {
-            position: relative;
             align-self: flex-end;
             margin: 2em 10em 0 0;
             font-size: 1.3rem;
-            overflow: hidden;
             z-index: 0;
-
-            &:hover::before {
-                animation: flash .6s .1s;
-             }
-             &::before {
-                 content: '';
-                 position: absolute;
-                 left: -30%;
-                 transform: translateY(-50px) rotate(30deg);
-                 height: 200%;
-                 width: 30px;
-                 background: linear-gradient(90deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
-                 transition: transform .2s .1s;
-                 z-index: -1;
-             }
         }
  
 
@@ -1093,9 +1084,8 @@ img {
 
     .services {
         &.section-padding {
-            padding: 14em 2em 25em;
+            padding: 12em 2em 25em;
         }
-
         .section-title {
             font-size: 3.4rem;
             margin: 0 0 1.5em;

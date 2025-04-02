@@ -3,6 +3,7 @@ const navbarToggler = document.querySelector('.nav__toggle-btn')
 const navMobile = document.getElementById('mobile-navigation')
 const navMobileLinks = document.querySelectorAll('.nav__mobile-link')
 const footerYear = document.querySelector('.footer__year')
+const nav = document.querySelector('.nav')
 
 navbarToggler.addEventListener('click', () => {
     const isOpened = navbarToggler.getAttribute('aria-expanded')
@@ -51,7 +52,18 @@ const handleNavItemsAnimation = () => {
 }
 
 
+const handleNav = () => {
+    const threshold = 600; 
+    const buffer = 20; 
+    const shouldShrink = window.scrollY > threshold + buffer && window.innerWidth >= 700;
+    const shouldExpand = window.scrollY < threshold - buffer;
 
+    if (shouldShrink) {
+        nav.classList.add('shrink');
+    } else if (shouldExpand) {
+        nav.classList.remove('shrink');
+    }
+};
 
 const handleCurrentYear = () => {
     const year = (new Date).getFullYear()
@@ -60,3 +72,4 @@ const handleCurrentYear = () => {
 
 handleCurrentYear()
 
+window.addEventListener('scroll', handleNav)

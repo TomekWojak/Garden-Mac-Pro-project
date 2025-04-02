@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
 <link rel="stylesheet" href="./css/style.css">
 <script src="https://kit.fontawesome.com/cdbdae0066.js" crossorigin="anonymous" defer></script>
 </head>
@@ -68,13 +69,13 @@
     </div> 
     <div class="header__content">
         <div class="header__text">
-            <h1 class="header__title"><span class="accent-text">Gwarancja</span> jakości,
-            <span class="header__title">niezawodności,</span>
-            <span class="header__title">profesjonalizmu</span></h1>
-            <a href="#offers" role="button" class="header__btn">zobacz ofertę</a>
+            <h1 data-aos="fade-up" data-aos-duration="600" class="header__title"><span class="accent-text">Gwarancja</span> jakości,
+            <span data-aos="fade-up" data-aos-delay="200" data-aos-duration="600" class="header__title">niezawodności,</span>
+            <span data-aos="fade-up" data-aos-delay="400" data-aos-duration="600" class="header__title">profesjonalizmu</span></h1>
+            <a href="#offers" data-aos="fade-up" role="button" class="header__btn">zobacz ofertę</a>
         </div>
 
-        <div class="header__info">
+        <div data-aos="fade-left" data-aos-delay="800" data-aos-duration="400" class="header__info">
             <div class="header__box">
                 <img loading="lazy" width="17" height="17" src="./images/star-solid.svg" alt="">
                 <img loading="lazy" width="17" height="17" src="./images/star-solid.svg" alt="">
@@ -249,33 +250,33 @@
     <section class="about section-padding" id="about">
         <h2 class="section-title"><span class="underline-text">co nas</span> <span class="accent-text">wyróżnia</span></h2>
         <div class="about__box wrapper">
-            <div class="about__info">
+            <div data-aos="zoom-in" data-aos-delay="50" class="about__info">
                 <i class="fa-solid fa-rocket about__info-icon"></i>
                 <h3 class="about__info-title">gotowość na wyzwania</h3>
                 <p class="about__info-text">Podejmujemy się zarówno standardowych, jak i nietypowych zleceń – nie boimy się nowych wyzwań!</p>
             </div>
-            <div class="about__info">
+            <div data-aos="zoom-in" data-aos-delay="150" class="about__info">
                 <i class="fa-solid fa-clock about__info-icon"></i>
                 <h3 class="about__info-title">terminowość</h3>
                 <p class="about__info-text">Szanujemy Twój czas – każde zlecenie wykonujemy terminowo i bez opóźnień 
                 </p>
             </div>
-            <div class="about__info">
+            <div data-aos="zoom-in" data-aos-delay="100" class="about__info">
                 <i class="fa-solid fa-dollar-sign about__info-icon"></i>
                 <h3 class="about__info-title">przystępne ceny</h3>
                 <p class="about__info-text">Profesjonalizm w rozsądnej cenie – uczciwa wycena każdego zlecenia.</p>
             </div>
-            <div class="about__info">
+            <div data-aos="zoom-in" data-aos-delay="300" class="about__info">
                 <i class="fa-solid fa-screwdriver-wrench about__info-icon"></i>
                 <h3 class="about__info-title">szeroki zakres usług</h3>
                 <p class="about__info-text">Od koszenia trawy po prace polowe – wykonamy to, czego potrzebujesz.</p>
             </div>
-            <div class="about__info">
+            <div data-aos="zoom-in" data-aos-delay="200" class="about__info">
                 <i class="fa-solid fa-face-smile about__info-icon"></i>
                 <h3 class="about__info-title">zadowoleni klienci</h3>
                 <p class="about__info-text">Twoja satysfakcja to nasz priorytet – dbamy o jakość i dokładność.</p>
             </div>
-            <div class="about__info">
+            <div data-aos="zoom-in" data-aos-delay="250" class="about__info">
                 <i class="fa-solid fa-location-dot about__info-icon"></i>
                 <h3 class="about__info-title">Mobilność i dostępność</h3>
                 <p class="about__info-text">Docieramy tam, gdzie nas potrzebujesz, niezależnie od lokalizacji.</p>
@@ -311,6 +312,8 @@
     <p class="footer__text">&copy; <span class="footer__year"></span> Nazwa Firmy</p>
     <p class="footer__text">Wszelkie prawa zastrzeżone</p>
 </footer>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src="./js/aos.js"></script>
 <script src="./js/main.js"></script>
 </body>
 </html>

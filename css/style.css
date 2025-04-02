@@ -50,18 +50,6 @@
     transform: translateX(0);
   }
 }
-@keyframes flash {
-  0% {
-    transform: translateY(-50px) rotate(30deg);
-  }
-  50% {
-    transform: translate(300px) rotate(30deg);
-  }
-  100% {
-    transform: translate(300px) rotate(30deg);
-    display: none;
-  }
-}
 @keyframes tooltip {
   from {
     transform: translate(-50%, 20px);
@@ -222,7 +210,7 @@
 }
 
 :root {
-  --accentColor: #ce2e2e;
+  --accentColor: #D32F2F;
   --pureWhite: #fff;
   --lightGray: #555555;
   --pureBlack: #000;
@@ -266,6 +254,16 @@ img {
   background-color: var(--pureWhite);
   box-shadow: 5px 5px 10px rgba(46, 46, 46, 0.0745098039);
   z-index: 1000;
+}
+.nav.shrink .nav__logo img {
+  width: 55px;
+  height: 55px;
+  min-width: 55px;
+  min-height: 55px;
+}
+.nav.shrink .nav__desktop-link {
+  padding: 0.5em 2em;
+  font-size: 1.5rem;
 }
 .nav .wrapper {
   display: flex;
@@ -349,6 +347,7 @@ img {
 
 .header {
   position: relative;
+  overflow: hidden;
 }
 .header__bg {
   position: relative;
@@ -404,6 +403,7 @@ img {
 }
 .header__title {
   font-size: clamp(2.8rem, 8vw, 4.8rem);
+  display: inline-block;
 }
 .header__btn {
   display: inline-block;
@@ -420,15 +420,12 @@ img {
   text-transform: uppercase;
   filter: drop-shadow(5px 5px 10px rgba(46, 46, 46, 0.1803921569));
   text-shadow: 3px 3px 5px rgba(46, 46, 46, 0.1803921569);
-  transition: background 0.3s, border 0.3s, transform 0.3s;
+  transition: background 0.3s, border 0.3s, opacity 0.6s 0.6s ease, transform 0.6s 0.6s ease !important;
 }
 .header__btn:hover, .header__btn:focus-visible {
   background: none;
   border: 2px solid var(--accentColor);
   outline: none;
-}
-.header__btn:active {
-  transform: scale(0.95);
 }
 .header__box {
   margin: 2em 0;
@@ -590,7 +587,7 @@ img {
   font-size: 1.25rem;
 }
 .offers__info .accent-text {
-  font-weight: 650;
+  font-weight: 600;
   color: #9a2222;
 }
 .offers__link {
@@ -759,10 +756,10 @@ img {
   .nav__logo img {
     width: 75px;
     height: 75px;
-    transition: height 0.1s ease-out, width 0.1s ease-out;
+    transition: height 0.2s ease-out, width 0.2s ease-out;
   }
   .nav__desktop-link {
-    transition: padding 0.1s, color 0.3s;
+    transition: padding 0.2s ease-out, color 0.3s;
   }
   .nav__toggle-btn {
     display: none;
@@ -1073,26 +1070,10 @@ img {
     margin-inline-start: 4em;
   }
   .header__btn {
-    position: relative;
     align-self: flex-end;
     margin: 2em 10em 0 0;
     font-size: 1.3rem;
-    overflow: hidden;
     z-index: 0;
-  }
-  .header__btn:hover::before {
-    animation: flash 0.6s 0.1s;
-  }
-  .header__btn::before {
-    content: "";
-    position: absolute;
-    left: -30%;
-    transform: translateY(-50px) rotate(30deg);
-    height: 200%;
-    width: 30px;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
-    transition: transform 0.2s 0.1s;
-    z-index: -1;
   }
   .header__text {
     display: flex;
@@ -1115,7 +1096,7 @@ img {
     margin: 4em 0 0 2em;
   }
   .services.section-padding {
-    padding: 14em 2em 25em;
+    padding: 12em 2em 25em;
   }
   .services .section-title {
     font-size: 3.4rem;
