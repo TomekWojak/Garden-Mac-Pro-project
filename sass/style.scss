@@ -1,13 +1,10 @@
 @use './_animations' as *;
 @use './_components' as *;
-
 *, *::after, *::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
-
 :root {
     --accentColor: #D32F2F;
     --pureWhite: #fff;
@@ -20,33 +17,26 @@
     --mainFont: 'Oswald', sans-serif;
     --secondaryFont: 'Roboto', sans-serif;
 }
-
 html {
     font-size: 62.5%;
     scroll-behavior: smooth;
-
     scroll-padding-top: 30px;
 }
-
 body {
     font-family: var(--mainFont);
     overflow-x: hidden;
 }
-
 img {
     max-width: 100%;
     display: block;
     font-style: italic;
     color: var(--pureWhite);
 }
-
 .wrapper {
     margin: 0 auto;
     width: 100%;
     max-width: 1200px;
 }
-
-
 .nav {
     position: sticky;
     width: 100%;
@@ -55,27 +45,25 @@ img {
     background-color:var(--pureWhite);
     box-shadow: 5px 5px 10px #2e2e2e13;
     z-index: 1000;
-
     &.shrink .nav__logo img {
         width: 55px;
         height: 55px;
         min-width: 55px;
         min-height: 55px;
+        transition: width .2s, height .2s;
     }
     &.shrink .nav__desktop-link {
         padding: 0.5em 2em;
         font-size: 1.5rem;
-
+        transition: padding .2s;
     }
     .wrapper {
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
-
     &__logo {
         text-decoration: none;
-
         img {
             min-width: 65px;
             min-height: 65px;
@@ -83,11 +71,9 @@ img {
             background-color: var(--pureWhite);
         }
     }
-
     &__desktop {
         display: none;
     }
-
     &__mobile {
         position: fixed;
         display: flex;
@@ -107,8 +93,6 @@ img {
         transition: transform .4s, visibility .4s;
         visibility: hidden;
         backdrop-filter: blur(5px);
-
-
         &.collapsed {
             transform: translateX(0);
             visibility:visible;
@@ -123,9 +107,6 @@ img {
         color: var(--pureBlack);
         font-weight: 300;
         letter-spacing: 2px;
-
-
-
         &:focus {
             outline: none;
             color: var(--accentColor);
@@ -133,8 +114,6 @@ img {
         &.animation {
             animation: slideLeft .4s both;
         }
-
-
     }
     &__mobile-social {
         display: flex;
@@ -151,7 +130,6 @@ img {
         text-decoration: none;
         color: var(--pureBlack);
         transition: color .3s;
-
         &:hover, &:focus {
             outline: none;
             color: var(--accentColor);
@@ -159,25 +137,18 @@ img {
     }
 }
 
-
 // HEADER 
-
 .header {
     position: relative;
     overflow: hidden;
-
-    
     &__bg {
         @include bgProperties;
-
         img {
             width: 100%;
             height:100%;
             object-fit: cover;
             object-position: center;
         }
-
-
         &--wood {
             background-image: url('../images/wood-blurred.jpg');
         }
@@ -187,7 +158,6 @@ img {
         &--painting{
             background-image: url('../images/painting-blurred.jpg');
         }
-
         &::before {
             content: '';
             position: absolute;
@@ -196,11 +166,7 @@ img {
             inset: 0;
             background-color: rgba(0, 0, 0, .65);
         }
-
-
     }
-
-
     &__content {
         position: absolute;
         width: 100%;
@@ -210,7 +176,6 @@ img {
         transform: translate(-50%, -50%);
         padding: 0 2em;
         text-align: center;
-
         .accent-text {
             font-weight: 600;
         }
@@ -243,17 +208,14 @@ img {
         filter: drop-shadow(5px 5px 10px #2e2e2e2e);
         text-shadow: 3px 3px 5px #2e2e2e2e;
         transition: background .3s, border .3s, opacity .6s .6s ease, transform .6s .6s ease !important;
-
         &:hover, &:focus-visible {
             background: none;
             border: 2px solid var(--accentColor);
             outline: none;
         }
     }
-
     &__box {
         margin: 2em 0;
-
         img {
             display: inline-block;
             aspect-ratio: 1;
@@ -261,7 +223,6 @@ img {
             min-height: 17px;
             filter: drop-shadow(5px 5px 10px #2e2e2e2e);
         }
-
     }
     &__info-text {
         font-size: clamp(1rem, 5vw, 2.6rem);
@@ -271,18 +232,13 @@ img {
     }
 }
 
-
-
 // SERVICES SECTION
-
 .services {
     overflow: hidden;
     position: relative;
-
     &.section-padding {
         padding: 8em 2em 18em;
     }
-
     .section-title {
         margin: 0 0 2em;
     }
@@ -294,7 +250,6 @@ img {
         filter: drop-shadow(5px 5px 10px #2e2e2e2e);
         background-image: url('../images/services-img-blurred.jpg');
         @include bgProperties;
-
         &::before {
             content: '';
             position: absolute;
@@ -311,7 +266,6 @@ img {
 
         }
     }
-
     &__item {
         display: flex;
         align-items: center;
@@ -329,7 +283,6 @@ img {
         min-height: 20px;
         border: 2px solid var(--pureBlack);
         border-radius: 5px;
-
         img {
             width: 90%;
             height: 90%;
@@ -340,16 +293,12 @@ img {
         text-transform: uppercase;
         letter-spacing: 2px;
     }
-
 }
 
-
 // OFFERS SECTION
-
 .offers {
     position: relative;
     background-color: var(--offersBg);
-
     .divider {
         width: 50%;
         max-width: 500px;
@@ -360,15 +309,11 @@ img {
         bottom: initial;
         top: -119px;
     }
-
     &.section-padding {
         padding: 10em 2em 4em;
     }
-    
-
     &__offer {
         margin: 10em 0;
-
         &:first-child {
             margin: 0;
         }
@@ -376,13 +321,11 @@ img {
             margin: 10em 0 5em;
         }
     }
-
     &__img {
         border-radius: 10px;
         overflow: hidden;
         box-shadow: 5px 5px 10px #2e2e2e2e;
         @include bgProperties;
-
         &--mowing {
             background-image: url('../images/mowing-blurred.jpg');
         }
@@ -401,7 +344,6 @@ img {
         &--paving {
             background-image: url('../images/paving-blurred.jpg');
         }
-
         &::before {
             content: '';
             position: absolute;
@@ -411,7 +353,6 @@ img {
             background-color: rgba(0, 0, 0, .4);
             z-index: 10;
         }
-
         img {
             width: 100%;
             height: auto;
@@ -424,7 +365,6 @@ img {
         text-align: center;
         font-family: var(--secondaryFont);
         font-size: 1.25rem;
-        
         .accent-text {
             font-weight: 600;
             color: #9a2222;
@@ -433,7 +373,6 @@ img {
     &__link {
         color: #9a2222;
         text-decoration: none;
-        
         &:hover, &:focus-visible {
             text-decoration: underline;
         }
@@ -446,7 +385,6 @@ img {
         font-size: 2rem;
         font-weight: normal;
         letter-spacing: 1px;
-
         .accent-text {
             font-weight: 600;
         }
@@ -456,24 +394,16 @@ img {
         font-family: var(--secondaryFont);
         line-height: 150%;
     }
-
 }
 
-
-
-
 // ABOUT SECTION
-
 .about {
     background-image: var(--aboutBg);
     text-align: center;
     position: relative;
-
-
     &.section-padding {
         padding: 8em 2em 18em;
     }
-
     &__info {
         margin: 5em 0;
     }
@@ -497,17 +427,14 @@ img {
 }
 
 // CONTACT SECTION
-
 .contact {
     background-color: var(--contactBg);
     text-align: center;
-    
     &__box {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-
     &__box-info {
         display: flex;
         flex-direction: column;
@@ -523,7 +450,6 @@ img {
         font-weight: 300;
         color: var(--pureBlack);
         text-decoration: none;
-
         &:hover {
             text-decoration: underline;
         }
@@ -537,37 +463,26 @@ img {
         font-size: 2.2rem;
         color: var(--pureBlack);
     }
-
 }
 
-
-
 // FOOTER
-
 .footer {
     padding: 2em;
     border-top: 1px solid var(--pureBlack);
     background-color: var(--contactBg);
     text-align: center;
     font-family: var(--secondaryFont);
-
     &__text {
         font-size: 1.3rem;
-
         &:last-child {
             margin-block-start: .5em;
         }
     }
 }
 
-
 // ============= MEDIA ===============
-
-
-
 @media(min-width: 576px) {
     .nav {
-
         &__mobile {
             width: 400px;
             top: 0;
@@ -577,9 +492,7 @@ img {
             box-shadow: 5px 5px 10px #2e2e2e2e;
         }
     }
-
     .services {
-
         &__text {
             font-size: 2.2rem;
         }
@@ -591,13 +504,10 @@ img {
             padding: 2em;
         }
     }
-
-
     .offers {
         &.section-padding {
             padding: 10em 2em 5em;
         }
-
         .divider {
             margin: 6em auto 3em;
         }
@@ -611,9 +521,7 @@ img {
             font-size: 1.3rem;
         }
     }
-
     .contact {
-
         &__box-title, &__box-data {
             font-size: 2.4rem;
         }
@@ -623,7 +531,6 @@ img {
     }
 
     .about {
-
         &__info-title {
             font-size: 2.1rem;
         }
@@ -634,27 +541,22 @@ img {
             font-size: 2.3rem;
         }
     }
-
-
 }
 
 @media(min-width: 700px) {
-
     .nav{
         padding: 0 1em;
-
         .wrapper {
             justify-content: flex-start;
         }
         &__logo img {
             width: 75px;
             height: 75px;
-            transition: height .2s ease-out, width .2s ease-out;
+            transition: height .1s, width .1s;
         }
         &__desktop-link {
-            transition: padding .2s ease-out, color .3s;
+            transition: padding .1s, color .3s;
         }
-
         &__toggle-btn {
             display: none;
         }
@@ -676,19 +578,15 @@ img {
             font-weight: 300;
             letter-spacing: 2px;
             transition: color .3s;
-
             &:hover, &:focus-visible {
                 color: var(--accentColor);
                 outline: none;
             }
-
         }
     }
-
     .header {
         display: flex;
         height: 80vh;
-
         &__content {
             display: flex;
             align-items: flex-start;
@@ -697,7 +595,6 @@ img {
         &__title {
             font-size: 3.4rem;
         }
-
         &__text {
             width: 50%;
             text-align: left;
@@ -708,23 +605,17 @@ img {
         &__box:first-child {
             margin: 0 0 2em;
         }
-
         &__info-text {
             font-size: 1.8rem;
         }
         &__btn {
             margin: 2em 0 0;
         }
-        
     }
-
     .services {
-
-
         &.section-padding {
             padding: 10em 2em 25em;
         }
-
         &__content {
             position: relative;
             z-index: 0;
@@ -741,9 +632,7 @@ img {
             opacity: .02;
         }
     }
-
     .offers {
-
         &.section-padding {
             padding: 14em 2em 6em;
         }
@@ -757,16 +646,13 @@ img {
             font-size: 1.8rem;
         }
     }
-
     .about {
-
         &.section-padding {
             padding: 10em 2em 20em;
         }
         .section-title {
             margin: 0 0 2em;
         }
-
         &__box {
             display: flex;
             flex-flow: row wrap;
@@ -778,14 +664,9 @@ img {
             margin: 5em 1em;
         }
     }
-
-
 }
-
-
 @media(min-width: 768px) {
     .header {
-
         &__info-text {
             display: inline-block;
             padding-inline-start: .3em;
@@ -805,16 +686,11 @@ img {
                 margin: 3em 0 0 1.5em;
             }
         }
-
     }
-
-    
     .services {
-
         .section-title {
             font-size: 3rem;
         }
-
         &__box {
             display: flex;
             justify-content: center;
@@ -830,11 +706,9 @@ img {
             width: min(400px, 45%);
             border-radius: 10px;
             overflow: hidden;
-
             &::before {
                 background-color: rgba(0, 0, 0, .3);
             }
-
             img {
                 height: 100%;
             }
@@ -848,10 +722,7 @@ img {
             left: -5em;
         }
     }
-
-
     .offers {
-
         .divider {
             transform: rotate(0);
             margin: 10em auto 3em;
@@ -859,11 +730,9 @@ img {
         &__info {
             font-size: 1.4rem;
         }
-
         &__offer {
             display: flex;
             margin: 15em 0;
-            
             &:nth-child(even) .offers__img {
                 order: 1;
             }
@@ -872,7 +741,6 @@ img {
             width: 50%;
             min-height: 286px;
             max-height: 340px;
-
             img {
                 height: 100%;
             }
@@ -881,7 +749,6 @@ img {
             position: relative;
             width: 50%;
             padding: 2em;
-
             &::before {
                 content: '';
                 position: absolute;
@@ -898,8 +765,6 @@ img {
             font-size: 1.55rem;
         }
     }
-
-
     .contact {
         &__box {
             text-align: left;
@@ -912,12 +777,10 @@ img {
         &__box-title, &__box-data {
             font-size: 1.8rem;
         }
-
         &__box-icon {
             position: relative;
             font-size: 2.4rem;
             transition: color .3s;
-
             &:hover {
                 color: #1E90FF;
             }
@@ -926,7 +789,6 @@ img {
             animation: tooltip .3s .2s forwards;
             transition: opacity .3s .2s, transform .3s .2s cubic-bezier(0.25, 0.1, 0.12, 1.73);
         }   
-
             &::before {
                 display: none;
                 content: 'Facebook';
@@ -961,13 +823,11 @@ img {
                 border-bottom: 12px solid #1E90FF;
             }
         }
-
     }
 }
 
 @media(min-width: 800px){
     .header {
-
         &__title {
             font-size: 4rem;
         }
@@ -984,9 +844,7 @@ img {
             }
         }
     }
-
     .services {
-
         &__text {
             font-size: 2rem;
         }
@@ -995,10 +853,7 @@ img {
             height: 22px;
         }
     }
-
-
     .contact {
-
         &__box-title {
             font-size: 2rem;
         }
@@ -1007,16 +862,13 @@ img {
             font-size: 2.7rem;
         }
     }
-
     .about {
-
         &__info-icon {
             font-size: 2.6rem;
         }
         &__info-title {
             font-size: 2.3rem;
         }
-
     }
 }
 
@@ -1035,13 +887,10 @@ img {
 }
 
 @media(min-width: 992px) {
-
     .header {
-
         &__title {
             font-size: 4.4rem;
             line-height: 160%;
-
             &:nth-child(2) {
                 margin-inline-start: 3em;
             }
@@ -1049,15 +898,12 @@ img {
                 margin-inline-start: 4em;
             }
         }
-
         &__btn {
             align-self: flex-end;
             margin: 2em 10em 0 0;
             font-size: 1.3rem;
             z-index: 0;
         }
- 
-
         &__text {
             display: flex;
             flex-direction: column;
@@ -1081,7 +927,6 @@ img {
             }
         }
     }
-
     .services {
         &.section-padding {
             padding: 12em 2em 25em;
@@ -1094,13 +939,10 @@ img {
             padding: 2em 6em;
         }
     }
-
     .offers {
-
         .line {
             top: -137.5px;
         }
-
         &__title {
             font-size: 2.8rem;
         }
@@ -1123,10 +965,7 @@ img {
             }
         }
     }
-
-
     .contact {
-
         &__box-title, &__box-data {
             font-size: 2.4rem;
         }
@@ -1134,18 +973,14 @@ img {
             font-size: 2.9rem;
         }
     }
-
     .about {
-
         &__info {
             width: 30%;
         }
     }
 }
-
 @media(min-width: 1100px) {
     .about {
-
         &__info-icon {
             font-size: 3rem;
         }
@@ -1156,9 +991,7 @@ img {
             font-size: 1.8rem;
         }
     }
-
     .services {
-
         .section-title {
             font-size: 4rem;
         }
@@ -1166,7 +999,6 @@ img {
             font-size: 2.4rem;
         }
     }
-
     .offers {
         .divider {
             margin: 14em auto 3em;
@@ -1177,7 +1009,6 @@ img {
         &.section-padding {
             padding: 18em 2em 8em;
         }
-
         &__content {
             padding: 4em;
         }
@@ -1187,7 +1018,6 @@ img {
         }
     }
 }
-
 @media(min-width: 1200px) {
     .header {
         &__title {

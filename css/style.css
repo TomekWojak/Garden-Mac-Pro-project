@@ -260,10 +260,12 @@ img {
   height: 55px;
   min-width: 55px;
   min-height: 55px;
+  transition: width 0.2s, height 0.2s;
 }
 .nav.shrink .nav__desktop-link {
   padding: 0.5em 2em;
   font-size: 1.5rem;
+  transition: padding 0.2s;
 }
 .nav .wrapper {
   display: flex;
@@ -756,10 +758,10 @@ img {
   .nav__logo img {
     width: 75px;
     height: 75px;
-    transition: height 0.2s ease-out, width 0.2s ease-out;
+    transition: height 0.1s, width 0.1s;
   }
   .nav__desktop-link {
-    transition: padding 0.2s ease-out, color 0.3s;
+    transition: padding 0.1s, color 0.3s;
   }
   .nav__toggle-btn {
     display: none;

@@ -14,34 +14,29 @@ navbarToggler.addEventListener('click', () => {
         navMobile.setAttribute('aria-expanded', 'true')
         navMobile.classList.add('collapsed')
         navMobile.removeAttribute('inert')
-
     }else {
         navbarToggler.classList.add('closed')
         navbarToggler.setAttribute('aria-expanded', 'false')
         navMobile.setAttribute('inert', 'true')
         navMobile.setAttribute('aria-expanded', 'false')
         navMobile.classList.remove('collapsed')
-
         setTimeout(() => {
             navbarToggler.classList.remove('closed')
         }, 500)
     }
-
     navMobileLinks.forEach(link => link.addEventListener('click', () => {
         navbarToggler.classList.add('closed')
         navbarToggler.setAttribute('aria-expanded', 'false')
         navMobile.setAttribute('aria-expanded', 'false')
         navMobile.classList.remove('collapsed')
         navMobile.setAttribute('inert', 'true')
-        link.classList.remove('animation')
+        navMobileLinks.forEach(link => link.classList.remove('animation'))
         setTimeout(() => {
             navbarToggler.classList.remove('closed')
         }, 500)
     }))
-
     handleNavItemsAnimation()
 })
-
 const handleNavItemsAnimation = () => {
     let delayTime = 0;
     navMobileLinks.forEach(link => {
@@ -51,13 +46,11 @@ const handleNavItemsAnimation = () => {
     })
 }
 
-
 const handleNav = () => {
     const threshold = 600; 
     const buffer = 20; 
     const shouldShrink = window.scrollY > threshold + buffer && window.innerWidth >= 700;
     const shouldExpand = window.scrollY < threshold - buffer;
-
     if (shouldShrink) {
         nav.classList.add('shrink');
     } else if (shouldExpand) {
@@ -71,5 +64,4 @@ const handleCurrentYear = () => {
 }
 
 handleCurrentYear()
-
 window.addEventListener('scroll', handleNav)
