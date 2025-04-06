@@ -41,19 +41,17 @@ img {
     position: sticky;
     width: 100%;
     top: 0;
-    padding: .5em 1em;
+    padding: 1em;
     background-color:var(--pureWhite);
     box-shadow: 5px 5px 10px #2e2e2e13;
     z-index: 1000;
     &.shrink .nav__logo img {
-        width: 55px;
-        height: 55px;
-        min-width: 55px;
-        min-height: 55px;
+        width: 100px;
+        height: 36px;
         transition: width .2s, height .2s;
     }
     &.shrink .nav__desktop-link {
-        padding: 0.5em 2em;
+        padding: 1em 2em;
         font-size: 1.5rem;
         transition: padding .2s;
     }
@@ -65,8 +63,6 @@ img {
     &__logo {
         text-decoration: none;
         img {
-            min-width: 65px;
-            min-height: 65px;
             aspect-ratio: 1;
             background-color: var(--pureWhite);
         }
@@ -89,10 +85,9 @@ img {
         list-style-type: none;
         z-index: -1;
         transform: translateX(105%);
-        background-color: rgba(255, 255, 255, 0.8);
+        background-color: rgba(255, 255, 255, 11);
         transition: transform .4s, visibility .4s;
         visibility: hidden;
-        backdrop-filter: blur(5px);
         &.collapsed {
             transform: translateX(0);
             visibility:visible;
@@ -550,8 +545,6 @@ img {
             justify-content: flex-start;
         }
         &__logo img {
-            width: 75px;
-            height: 75px;
             transition: height .1s, width .1s;
         }
         &__desktop-link {
@@ -564,6 +557,7 @@ img {
             display: none;
         }
         &__desktop {
+            margin-inline-start: 2em;
             display: flex;
             align-items: center;
             list-style-type: none;
