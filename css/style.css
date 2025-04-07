@@ -263,7 +263,7 @@ img {
 .nav.shrink .nav__desktop-link {
   padding: 1em 2em;
   font-size: 1.5rem;
-  transition: padding 0.2s;
+  transition: padding 0.2s, color 0.3s;
 }
 .nav .wrapper {
   display: flex;
