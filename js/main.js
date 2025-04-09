@@ -1,3 +1,4 @@
+document.addEventListener('DOMContentLoaded', function(){
 
 const navbarToggler = document.querySelector('.nav__toggle-btn')
 const navMobile = document.getElementById('mobile-navigation')
@@ -65,3 +66,6 @@ const handleCurrentYear = () => {
 
 handleCurrentYear()
 window.addEventListener('scroll', handleNav)
+
+
+})
