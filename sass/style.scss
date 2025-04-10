@@ -778,6 +778,12 @@ img {
             &:hover {
                 color: #1E90FF;
             }
+
+        &:focus-visible {
+            outline: none;
+            color: #1E90FF;
+        }
+
         &:hover::before, &:hover::after {
             display: flex;
             animation: tooltip .3s .2s forwards;
@@ -801,7 +807,9 @@ img {
                 color: var(--pureWhite);
                 border-radius: 5px;
                 letter-spacing: 1px;
+                pointer-events: none;
             }
+
             &::after {
                 display: none;
                 content: '';
@@ -815,6 +823,7 @@ img {
                 border-left: 6px solid transparent;
                 border-right: 6px solid transparent;
                 border-bottom: 12px solid #1E90FF;
+                pointer-events: none;
             }
         }
     }

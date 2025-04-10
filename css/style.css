@@ -969,6 +969,10 @@ img {
   .contact__box-icon:hover {
     color: #1E90FF;
   }
+  .contact__box-icon:focus-visible {
+    outline: none;
+    color: #1E90FF;
+  }
   .contact__box-icon:hover::before, .contact__box-icon:hover::after {
     display: flex;
     animation: tooltip 0.3s 0.2s forwards;
@@ -992,6 +996,7 @@ img {
     color: var(--pureWhite);
     border-radius: 5px;
     letter-spacing: 1px;
+    pointer-events: none;
   }
   .contact__box-icon::after {
     display: none;
@@ -1006,6 +1011,7 @@ img {
     border-left: 6px solid transparent;
     border-right: 6px solid transparent;
     border-bottom: 12px solid #1E90FF;
+    pointer-events: none;
   }
 }
 @media (min-width: 800px) {
