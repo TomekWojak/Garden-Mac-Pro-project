@@ -76,13 +76,13 @@
   stroke: #be1616;
 }
 .mode-switcher:hover .moon {
-  stroke: #0fa03d;
+  stroke: #08ee51;
 }
 .mode-switcher.dark .sun {
-  transform: translateX(120%);
+  transform: translateX(130%);
 }
 .mode-switcher.dark .moon {
-  transform: translate(150%, -50%);
+  transform: translate(140%, -50%);
 }
 
 .mode-switcher-desktop {
@@ -98,7 +98,7 @@
 
 .sun, .moon {
   pointer-events: none;
-  transition: stroke 0.3s, transform 0.3s;
+  transition: stroke 0.3s, transform 0.2s;
 }
 
 .sun {
@@ -291,7 +291,7 @@ body {
   overflow-x: hidden;
 }
 body.dark {
-  --textColor: #e2d9d9;
+  --textColor: #eddfdf;
   --accentColor: #2fd363;
   --modeColor: #111010;
   --lightGray: #555555;
@@ -301,7 +301,7 @@ body.dark {
   --aboutBg: linear-gradient(to bottom, #292424 20%, #0f0c0c 100%);
   --contactBg: #181515;
 }
-body.dark .header__btn:hover {
+body.dark .header__btn:hover, body.dark .header__btn:focus-visible {
   color: #fff;
 }
 body.dark .underline-text {

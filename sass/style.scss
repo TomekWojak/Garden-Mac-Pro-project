@@ -28,7 +28,7 @@ body {
     overflow-x: hidden;
 
     &.dark {
-        --textColor: #e2d9d9;
+        --textColor: #eddfdf;
         --accentColor: #2fd363;
         --modeColor: #111010;
         --lightGray: #555555;
@@ -39,7 +39,7 @@ body {
         --contactBg: #181515;
     }
 
-    &.dark .header__btn:hover {
+    &.dark .header__btn:hover, &.dark .header__btn:focus-visible {
         color: #fff;
     }
     &.dark .underline-text {

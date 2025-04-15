@@ -23,14 +23,14 @@
         stroke: #be1616;
     }
     &:hover .moon {
-        stroke: #0fa03d;
+        stroke: #08ee51;
     }
 
     &.dark .sun {
-        transform: translateX(120%);
+        transform: translateX(130%);
     }
     &.dark .moon {
-        transform: translate(150%, -50%);
+        transform: translate(140%, -50%);
     }
 
 
@@ -48,7 +48,7 @@
 }
 .sun, .moon {
     pointer-events: none;
-    transition: stroke .3s, transform .3s;
+    transition: stroke .3s, transform .2s;
 }
 .sun {
     position: absolute;
