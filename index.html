@@ -29,6 +29,7 @@
             <li class="nav__mobile-item"><a href="#services" class="nav__mobile-link">Usługi</a></li>
             <li class="nav__mobile-item"><a href="#contact" class="nav__mobile-link">Kontakt</a></li>
             <li class="nav__mobile-item"><a href="#about" class="nav__mobile-link">O nas</a></li>
+            <button class="mode-switcher mode-switcher-mobile" aria-label="Przycisk umożliwiający zmianę motywu strony"><svg class="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#9a2222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg> <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2fd363" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></button>
             <div class="nav__mobile-social">
                 <a target="_blank" href="https://www.facebook.com/maciekwojak32?locale=pl_PL" class="nav__mobile-icon"><i class="fa-brands fa-square-facebook"></i></a>
             </div>
@@ -38,6 +39,8 @@
             <li class="nav__desktop-item"><a href="#contact" class="nav__desktop-link">Kontakt</a></li>
             <li class="nav__desktop-item"><a href="#about" class="nav__desktop-link">O nas</a></li>
         </ul>
+
+        <button class="mode-switcher mode-switcher-desktop" aria-label="Przycisk umożliwiający zmianę motywu strony"><svg class="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#9a2222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg> <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2fd363" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></button>
     </div>
 </nav>
 <header class="header">
@@ -63,26 +66,40 @@
         <div class="header__text">
             <h1 data-aos="fade-up" data-aos-duration="600" class="header__title"><span class="accent-text">Gwarancja</span> jakości,
             <span data-aos="fade-up" data-aos-delay="200" data-aos-duration="600" class="header__title">niezawodności,</span>
-            <span data-aos="fade-up" data-aos-delay="400" data-aos-duration="600" class="header__title">profesjonalizmu</span></h1>
+            <span data-aos="fade-up" data-aos-delay="400" data-aos-duration="600" class="header__title">solidności</span></h1>
             <a href="#offers" data-aos="fade-up" role="button" class="header__btn">zobacz ofertę</a>
         </div>
         <div data-aos="fade-left" data-aos-delay="800" data-aos-duration="400" class="header__info">
             <div class="header__box">
-                <img loading="lazy" width="17" height="17" src="./images/star-solid.svg" alt="">
-                <img loading="lazy" width="17" height="17" src="./images/star-solid.svg" alt="">
-                <img loading="lazy" width="17" height="17" src="./images/star-solid.svg" alt="">
+                <img loading="lazy" width="17" height="17" src="./images/star-light.svg" alt="" class="light-visible">
+                <img loading="lazy" width="17" height="17" src="./images/star-light.svg" alt="" class="light-visible">
+                <img loading="lazy" width="17" height="17" src="./images/star-light.svg" alt="" class="light-visible">
+
+                <img loading="lazy" width="17" height="17" src="./images/star-dark.svg" alt="" class="dark-visible">
+                <img loading="lazy" width="17" height="17" src="./images/star-dark.svg" alt="" class="dark-visible">
+                <img loading="lazy" width="17" height="17" src="./images/star-dark.svg" alt="" class="dark-visible">
                 <p class="header__info-text">szeroki zakres usług</p>
             </div>
             <div class="header__box">
-                <img loading="lazy" width="17" height="17" src="./images/star-solid.svg" alt="">
-                <img loading="lazy" width="17" height="17" src="./images/star-solid.svg" alt="">
-                <img loading="lazy" width="17" height="17" src="./images/star-solid.svg" alt="">
+                <img loading="lazy" width="17" height="17" src="./images/star-light.svg" alt="" class="light-visible">
+                <img loading="lazy" width="17" height="17" src="./images/star-light.svg" alt="" class="light-visible">
+                <img loading="lazy" width="17" height="17" src="./images/star-light.svg" alt="" class="light-visible">
+
+                
+                <img loading="lazy" width="17" height="17" src="./images/star-dark.svg" alt="" class="dark-visible">
+                <img loading="lazy" width="17" height="17" src="./images/star-dark.svg" alt="" class="dark-visible">
+                <img loading="lazy" width="17" height="17" src="./images/star-dark.svg" alt="" class="dark-visible">
                 <p class="header__info-text">zawsze na czas</p>
             </div>
             <div class="header__box">
-                <img loading="lazy" width="17" height="17" src="./images/star-solid.svg" alt="">
-                <img loading="lazy" width="17" height="17" src="./images/star-solid.svg" alt="">
-                <img loading="lazy" width="17" height="17" src="./images/star-solid.svg" alt="">
+                <img loading="lazy" width="17" height="17" src="./images/star-light.svg" alt="" class="light-visible">
+                <img loading="lazy" width="17" height="17" src="./images/star-light.svg" alt="" class="light-visible">
+                <img loading="lazy" width="17" height="17" src="./images/star-light.svg" alt="" class="light-visible">
+
+                
+                <img loading="lazy" width="17" height="17" src="./images/star-dark.svg" alt="" class="dark-visible">
+                <img loading="lazy" width="17" height="17" src="./images/star-dark.svg" alt="" class="dark-visible">
+                <img loading="lazy" width="17" height="17" src="./images/star-dark.svg" alt="" class="dark-visible">
                 <p class="header__info-text">sprzęt najwyższej jakości</p>
             </div>
         </div>
@@ -101,45 +118,45 @@
                 <h2 class="section-title"><span class="underline-text">Zakres</span> <span class="accent-text">usług</span></h2>
                 <div class="services__item">
                     <div class="services__checkbox">
-                        <img src="./images/check.svg" width="24" height="24" loading="lazy" alt="">
+                        <img src="./images/check-light.svg" width="24" height="24" loading="lazy" alt="" class="light-visible">
+                        <img src="./images/check-dark.svg" width="24" height="24" loading="lazy" alt="" class="dark-visible">
                     </div>
-                    <p class="services__text">Koszenie trawy</p>
+                    <p class="services__text">Koszenie trawy i usuwanie liści</p>
                 </div>
                 <div class="services__item">
                     <div class="services__checkbox">
-                        <img src="./images/check.svg" width="24" height="24" loading="lazy" alt="">
+                        <img src="./images/check-light.svg" width="24" height="24" loading="lazy" alt="" class="light-visible">
+                        <img src="./images/check-dark.svg" width="24" height="24" loading="lazy" alt="" class="dark-visible">
                     </div>
-                    <p class="services__text">usuwanie liści</p>
+                    <p class="services__text">Prace przy drewnie</p>
                 </div>
                 <div class="services__item">
                     <div class="services__checkbox">
-                        <img src="./images/check.svg" width="24" height="24" loading="lazy" alt="">
+                        <img src="./images/check-light.svg" width="24" height="24" loading="lazy" alt="" class="light-visible">
+                        <img src="./images/check-dark.svg" width="24" height="24" loading="lazy" alt="" class="dark-visible">
                     </div>
-                    <p class="services__text">praca przy drewnie</p>
+                    <p class="services__text">Malowanie powierzchni</p>
                 </div>
                 <div class="services__item">
                     <div class="services__checkbox">
-                        <img src="./images/check.svg" width="24" height="24" loading="lazy" alt="">
+                        <img src="./images/check-light.svg" width="24" height="24" loading="lazy" alt="" class="light-visible">
+                        <img src="./images/check-dark.svg" width="24" height="24" loading="lazy" alt="" class="dark-visible">
                     </div>
-                    <p class="services__text">prace ogrodowe</p>
+                    <p class="services__text">Drobne prace budowlane</p>
                 </div>
                 <div class="services__item">
                     <div class="services__checkbox">
-                        <img src="./images/check.svg" width="24" height="24" loading="lazy" alt="">
+                        <img src="./images/check-light.svg" width="24" height="24" loading="lazy" alt="" class="light-visible">
+                        <img src="./images/check-dark.svg" width="24" height="24" loading="lazy" alt="" class="dark-visible">
                     </div>
-                    <p class="services__text">malowanie</p>
+                    <p class="services__text">Prace ogrodowe</p>
                 </div>
                 <div class="services__item">
                     <div class="services__checkbox">
-                        <img src="./images/check.svg" width="24" height="24" loading="lazy" alt="">
+                        <img src="./images/check-light.svg" width="24" height="24" loading="lazy" alt="" class="light-visible">
+                        <img src="./images/check-dark.svg" width="24" height="24" loading="lazy" alt="" class="dark-visible">
                     </div>
-                    <p class="services__text">drobne prace budowlane</p>
-                </div>
-                <div class="services__item">
-                    <div class="services__checkbox">
-                        <img src="./images/check.svg" width="24" height="24" loading="lazy" alt="">
-                    </div>
-                    <p class="services__text">lokalny transport materiałów</p>
+                    <p class="services__text">Lokalny transport materiałów</p>
                 </div>
                 <img src="./images/canadian-maple-leaf-brands.svg" loading="lazy" width="150" height="150" alt="" class="services__content-bg">
             </div>
@@ -157,7 +174,7 @@
                 </div>
                 <div class="offers__content">
                     <h3 class="offers__title"><span class="accent-text">Koszenie trawników</span> - od małych działek po rozległe posesje</h3>
-                    <p class="offers__text">Oferujmy koszenie trawy na działkach, podwórkach i większych terenach. Pracuejmy sprawnie i dokładnie, korzystając ze sprawdzonego sprzętu. Dbamy o estetyczny wygląd terenu i rzetelnie wykonujemy swoją pracę. Ciesz się zadbanym otoczeniem bez zbędnego wysiłku!
+                    <p class="offers__text">Oferujmy koszenie trawy na działkach, podwórkach i większych terenach. Pracujemy sprawnie i dokładnie, korzystając ze sprawdzonego sprzętu. Dbamy o estetyczny wygląd terenu i rzetelnie wykonujemy swoją pracę.
                     </p>
                 </div>
             </div>
@@ -170,7 +187,7 @@
                 </div>
                 <div class="offers__content">
                     <h3 class="offers__title"><span class="accent-text">Oczyszczanie terenu z liści</span> – szybko, skutecznie, bez śladu</h3>
-                    <p class="offers__text">Sprawnie oczyszczamy trawniki, ścieżki i inne powierzchnie z liści przy użyciu różnorodnego sprzętu, dbając o schludny wygląd otoczenia. Zaufaj nam i ciesz się porządkiem w ogrodzie przez cały sezon!
+                    <p class="offers__text">Oczyszczamy trawniki, ścieżki i inne powierzchnie z liści przy użyciu różnorodnego sprzętu, dbając o schludny wygląd otoczenia. Zaufaj nam i ciesz się porządkiem w ogrodzie przez cały sezon!
                     </p>
                 </div>
             </div>
@@ -183,7 +200,7 @@
                 </div>
                 <div class="offers__content">
                     <h3 class="offers__title"><span class="accent-text">Prace przy drewnie</span> –  porządek i funkcjonalność w Twoim ogrodzie</h3>
-                    <p class="offers__text">Specjalizujemy się w pracy z drewnem – od porządkowania lasów, po tworzenie wyjątkowych elementów. Każdy kawałek drewna w naszych rękach zyskuje nowe życie, stając się zarówno ozdobą, jak i użytecznym dodatkiem do przestrzeni wokół domu. Tworzymy z pasją, dbając o naturę i estetykę.
+                    <p class="offers__text">Specjalizujemy się w pracy z drewnem – od porządkowania lasów i wycinki drzew, po tworzenie wyjątkowych elementów. Każdy kawałek drewna w naszych rękach zyskuje nowe życie, stając się zarówno ozdobą, jak i użytecznym dodatkiem do przestrzeni wokół domu. Tworzymy z pasją, dbając o naturę i estetykę.
                     </p>
                 </div>
             </div>
@@ -196,7 +213,7 @@
                 </div>
                 <div class="offers__content">
                     <h3 class="offers__title"><span class="accent-text">Prace ogrodowe</span> – Twój ogród w najlepszej formie</h3>
-                    <p class="offers__text">Nie masz czasu na pielęgnację ogrodu? My się tym zajmiemy! Przycinanie krzewów, grabienie liści czy inne drobne prace – wykonamy je szybko i dokładnie, aby Twój ogród wyglądał pięknie przez cały rok. Zadbaj o swój zielony zakątek bez wysiłku.
+                    <p class="offers__text">Nie masz czasu na pielęgnację ogrodu? My się tym zajmiemy! Przycinanie gałęzi, żywopłotu, ogólna pielęgnacja lub inne drobne prace – wykonamy je szybko i dokładnie, aby Twój ogród wyglądał pięknie przez cały rok. Zadbaj o swój zielony zakątek bez wysiłku.
                     </p>
                 </div>
             </div>
@@ -248,12 +265,12 @@
             <div data-aos="zoom-in" data-aos-delay="100" class="about__info">
                 <i class="fa-solid fa-dollar-sign about__info-icon"></i>
                 <h3 class="about__info-title">przystępne ceny</h3>
-                <p class="about__info-text">Profesjonalizm w rozsądnej cenie – uczciwa wycena każdego zlecenia.</p>
+                <p class="about__info-text">Usługi w rozsądnej cenie – uczciwa wycena każdego zlecenia.</p>
             </div>
             <div data-aos="zoom-in" data-aos-delay="300" class="about__info">
                 <i class="fa-solid fa-screwdriver-wrench about__info-icon"></i>
                 <h3 class="about__info-title">szeroki zakres usług</h3>
-                <p class="about__info-text">Od koszenia trawy po prace polowe – wykonamy to, czego potrzebujesz.</p>
+                <p class="about__info-text">Świadczymy kompleksowe usługi ogrodnicze i budowlane, dostosowane do indywidualnych potrzeb klientów.</p>
             </div>
             <div data-aos="zoom-in" data-aos-delay="200" class="about__info">
                 <i class="fa-solid fa-face-smile about__info-icon"></i>

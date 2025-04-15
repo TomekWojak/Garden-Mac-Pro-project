@@ -5,6 +5,18 @@ const navMobile = document.getElementById('mobile-navigation')
 const navMobileLinks = document.querySelectorAll('.nav__mobile-link')
 const footerYear = document.querySelector('.footer__year')
 const nav = document.querySelector('.nav')
+const modeSwitcherMobile = document.querySelector('.mode-switcher-mobile')
+const modeSwitcherDesktop = document.querySelector('.mode-switcher-desktop')
+
+
+const changeMode = () => {
+        modeSwitcherMobile.classList.toggle('dark')
+        document.body.classList.toggle('dark')
+        modeSwitcherDesktop.classList.toggle('dark')
+
+        const isDark = document.body.classList.contains('dark');
+        localStorage.setItem('dark-mode', isDark ? 'true' : 'false');
+}
 
 navbarToggler.addEventListener('click', () => {
     const isOpened = navbarToggler.getAttribute('aria-expanded')
@@ -66,6 +78,14 @@ const handleCurrentYear = () => {
 
 handleCurrentYear()
 window.addEventListener('scroll', handleNav)
-
-
+modeSwitcherMobile.addEventListener('click', changeMode)
+modeSwitcherDesktop.addEventListener('click', changeMode)
+window.addEventListener('DOMContentLoaded', () => {
+    const darkMode = localStorage.getItem('dark-mode');
+    if (darkMode === 'true') {
+        document.body.classList.add('dark');
+        modeSwitcherDesktop.classList.add('dark')
+        modeSwitcherMobile.classList.add('dark')
+    }
+})
 })
