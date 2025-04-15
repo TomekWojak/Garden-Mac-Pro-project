@@ -7,15 +7,26 @@ const footerYear = document.querySelector('.footer__year')
 const nav = document.querySelector('.nav')
 const modeSwitcherMobile = document.querySelector('.mode-switcher-mobile')
 const modeSwitcherDesktop = document.querySelector('.mode-switcher-desktop')
-
+const tooltipText = document.querySelector('.tooltip-text')
 
 const changeMode = () => {
         modeSwitcherMobile.classList.toggle('dark')
         document.body.classList.toggle('dark')
         modeSwitcherDesktop.classList.toggle('dark')
+        changeTooltipContent()
 
         const isDark = document.body.classList.contains('dark');
         localStorage.setItem('dark-mode', isDark ? 'true' : 'false');
+}
+
+const changeTooltipContent = () => {
+    if(modeSwitcherDesktop.classList.contains('dark') || document.body.classList.contains('dark')){
+        tooltipText.textContent = 'Tryb nocny'
+        tooltipText.style.color = '#000'
+    }else {
+        tooltipText.textContent = 'Tryb dzienny'
+        tooltipText.style.color = '#fff'
+    }
 }
 
 navbarToggler.addEventListener('click', () => {
@@ -87,5 +98,7 @@ window.addEventListener('DOMContentLoaded', () => {
         modeSwitcherDesktop.classList.add('dark')
         modeSwitcherMobile.classList.add('dark')
     }
+    changeTooltipContent()
 })
+
 })
