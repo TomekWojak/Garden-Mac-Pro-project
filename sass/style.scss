@@ -35,7 +35,7 @@ body {
         --pureBlack: #000;
         --servicesBg: #F2F2F2;
         --offersBg: #1b1a1a;
-        --aboutBg: linear-gradient(to bottom, #292424 20%, #0f0c0c 100%);
+        --aboutBg: linear-gradient(to bottom, #181515 20%, #1b1a1a 100%);
         --contactBg: #181515;
     }
 
@@ -348,6 +348,12 @@ img {
         margin: 2em auto;
         height: 1px;
     }
+    img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        object-position: center;
+    }
     .line {
         bottom: initial;
         top: -119px;
@@ -369,6 +375,17 @@ img {
         overflow: hidden;
         box-shadow: 5px 5px 10px #2e2e2e2e;
         @include bgProperties;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: auto;
+            inset: 0;
+            background-color: rgba(0, 0, 0, .4);
+            z-index: 10;
+        }
+
         &--mowing {
             background-image: url('../images/mowing-blurred.jpg');
         }
@@ -387,21 +404,19 @@ img {
         &--paving {
             background-image: url('../images/paving-blurred.jpg');
         }
-        &::before {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: auto;
-            inset: 0;
-            background-color: rgba(0, 0, 0, .4);
-            z-index: 10;
+        &--transport {
+            background-image: url('../images/quad-blurred.png');
+            &::before {
+                background-color: rgba(0, 0, 0, .3);
+            }
+            
+            
+            img {
+                object-position: left bottom;
+            }
         }
-        img {
-            width: 100%;
-            height: auto;
-            object-fit: cover;
-            object-position: center;
-        }
+
+
     }
     &__info {
         margin-block-end: 1em;

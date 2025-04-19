@@ -237,7 +237,7 @@
 @media (min-width: 700px) {
   .mode-switcher:hover + .tooltip, .mode-switcher:hover + .tooltip::before {
     display: block;
-    animation: tooltipVisible 0.2s forwards;
+    animation: tooltipVisible 0.2s 0.2s forwards;
   }
   .tooltip {
     display: none;
@@ -261,7 +261,7 @@
     opacity: 0;
     content: "";
     position: absolute;
-    right: -0.5em;
+    right: -0.4em;
     top: 50%;
     transform: translate(-15px, -50%);
     width: 0;
@@ -347,7 +347,7 @@ body.dark {
   --pureBlack: #000;
   --servicesBg: #F2F2F2;
   --offersBg: #1b1a1a;
-  --aboutBg: linear-gradient(to bottom, #292424 20%, #0f0c0c 100%);
+  --aboutBg: linear-gradient(to bottom, #181515 20%, #1b1a1a 100%);
   --contactBg: #181515;
 }
 body.dark .header__btn:hover, body.dark .header__btn:focus-visible {
@@ -668,6 +668,14 @@ img {
   margin: 2em auto;
   height: 1px;
 }
+.offers img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
 .offers .line {
   bottom: initial;
   top: -119px;
@@ -693,6 +701,15 @@ img {
   background-position: center;
   background-repeat: no-repeat;
 }
+.offers__img::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: auto;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 10;
+}
 .offers__img--mowing {
   background-image: url("../images/mowing-blurred.jpg");
 }
@@ -711,22 +728,15 @@ img {
 .offers__img--paving {
   background-image: url("../images/paving-blurred.jpg");
 }
-.offers__img::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: auto;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.4);
-  z-index: 10;
+.offers__img--transport {
+  background-image: url("../images/quad-blurred.png");
 }
-.offers__img img {
-  width: 100%;
-  height: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+.offers__img--transport::before {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.offers__img--transport img {
+  -o-object-position: left bottom;
+     object-position: left bottom;
 }
 .offers__info {
   margin-block-end: 1em;

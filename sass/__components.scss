@@ -166,7 +166,7 @@
 @media(min-width: 700px){
     .mode-switcher:hover + .tooltip, .mode-switcher:hover + .tooltip::before {
             display: block;
-            animation: tooltipVisible .2s forwards;
+            animation: tooltipVisible .2s .2s forwards;
     }
 
     .tooltip {
@@ -190,7 +190,7 @@
             opacity: 0;
             content: '';
             position: absolute;
-            right: -.5em;
+            right: -.4em;
             top: 50%;
             transform: translate(-15px,-50%);
             width: 0; 
