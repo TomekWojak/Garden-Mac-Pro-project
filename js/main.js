@@ -8,6 +8,41 @@ const nav = document.querySelector('.nav')
 const modeSwitcherMobile = document.querySelector('.mode-switcher-mobile')
 const modeSwitcherDesktop = document.querySelector('.mode-switcher-desktop')
 const tooltipText = document.querySelector('.tooltip-text')
+const slider = document.querySelector('.gallery__slider')
+const altTexts = ['Obraz przedstawia drewniany domek z ładną kamienną podmurówką', 'Obrazek przedstawia własnoręcznie wykonane, drewniane pomieszczenie do przechowywania drewna', 'Obrazek przedstawia pięknie udekorowany ogród ze starannie położoną korą drzewa', 'Obrazek przedstawia jeden ze sprzętów do wykonywania usług', 'Obrazek przedstawia ogród oraz ręcznie wykonane drewniane obudowy na kosze na śmieci', 'Obrazek przedstawia drzewko otoczone placem wysypanym korą', 'Obrazek przedstawia jeden ze sprzętów do wykonywania usług', 'Obrazek przedstawia małe pola uprawne znajdujące się w własnoręcznie wykonanych drewnianych obudowach', 'Obrazek przedstawia schludnie wyglądający i solidnie wykonany kojec dla psa', 'Obrazek przedstawia rząd drzew rosnących na terenie pokrytym korą, teren ten jest obgrodzony brukowymi słupkami', 'Obrazek przedstawia pięknie wykonany plac zabaw: huśtawkę, domek, zjeżdżalnie - wszystko wykonane z drewna i tworzywa sztucznego', 'Obrazek przedstawia czerwoną maszynę do cięcia gałęzi, a w tle stos gałęzi']
+
+const carousellSpeed = 6000
+let interval
+
+
+let index = 1
+const showNextImg = () => {
+        const sliderImgDesktop = document.querySelector('.gallery__img-desktop')
+        const sliderImgMobile = document.querySelector('.gallery__img-mobile')
+        const mobileImages = ['/images/slider-gallery/garden-1.jpg', '/images/slider-gallery/garden-2.jpg', '/images/slider-gallery/garden-3.jpg', '/images/slider-gallery/garden-4.jpg', '/images/slider-gallery/garden-5.jpg', '/images/slider-gallery/garden-6.jpg', '/images/slider-gallery/garden-7.jpg', '/images/slider-gallery/garden-8.jpg', '/images/slider-gallery/garden-9.jpg', '/images/slider-gallery/garden-10.jpg', '/images/slider-gallery/garden-11.jpg', '/images/slider-gallery/garden-12.jpg']
+        const desktopImages = ['/images/slider-gallery/garden-1-desktop.jpg','/images/slider-gallery/garden-2-desktop.jpg','/images/slider-gallery/garden-3-desktop.jpg','/images/slider-gallery/garden-4-desktop.jpg','/images/slider-gallery/garden-5-desktop.jpg','/images/slider-gallery/garden-6-desktop.jpg','/images/slider-gallery/garden-7-desktop.jpg','/images/slider-gallery/garden-8-desktop.jpg','/images/slider-gallery/garden-9-desktop.jpg','/images/slider-gallery/garden-10-desktop.jpg','/images/slider-gallery/garden-11-desktop.jpg','/images/slider-gallery/garden-12-desktop.jpg']
+
+        if(index === mobileImages.length){
+            index = 0
+        }
+        sliderImgMobile.classList.add('animated')
+        sliderImgMobile.setAttribute('src', mobileImages[index])
+        sliderImgMobile.setAttribute('alt', altTexts[index])
+
+        sliderImgDesktop.classList.add('animated')
+        sliderImgDesktop.setAttribute('src', desktopImages[index])
+        sliderImgDesktop.setAttribute('alt', altTexts[index])
+        index++
+
+        setTimeout(() => {
+            sliderImgDesktop.classList.remove('animated')
+            sliderImgMobile.classList.remove('animated')
+        }, 5000)
+
+    }
+
+
+
 
 const changeMode = () => {
         modeSwitcherMobile.classList.toggle('dark')
@@ -87,6 +122,16 @@ const handleCurrentYear = () => {
     footerYear.innerText = year
 }
 
+const startCarousel = () => {
+    interval = setInterval(showNextImg, carousellSpeed)
+}
+const stopCarousel = () => {
+    clearInterval(interval)
+}
+
+slider.addEventListener('mouseleave', startCarousel)
+slider.addEventListener('mouseenter', stopCarousel)
+startCarousel()
 handleCurrentYear()
 window.addEventListener('scroll', handleNav)
 modeSwitcherMobile.addEventListener('click', changeMode)

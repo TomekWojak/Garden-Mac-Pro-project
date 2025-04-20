@@ -70,6 +70,14 @@
     transform: translate(0, -50%);
   }
 }
+@keyframes fadeIn {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
+  }
+}
 .tooltip {
   display: none;
 }
@@ -321,8 +329,8 @@
   --modeColor: #fff;
   --lightGray: #555555;
   --pureBlack: #000;
-  --servicesBg: #F2F2F2;
   --offersBg: #fbfaf6;
+  --galleryBg: #F2F2F2;
   --aboutBg: linear-gradient(to bottom, #DCE4E8 0%, #E1E1E1 100%);
   --contactBg: #F0F0F0;
   --mainFont: "Oswald", sans-serif;
@@ -345,7 +353,7 @@ body.dark {
   --modeColor: #111010;
   --lightGray: #555555;
   --pureBlack: #000;
-  --servicesBg: #F2F2F2;
+  --galleryBg: #282525;
   --offersBg: #1b1a1a;
   --aboutBg: linear-gradient(to bottom, #181515 20%, #1b1a1a 100%);
   --contactBg: #181515;
@@ -376,6 +384,9 @@ body.dark .nav__mobile {
 }
 body.dark .nav__mobile-icon {
   color: var(--textColor);
+}
+body.dark .gallery__slider {
+  border: 10px solid rgb(48, 46, 46);
 }
 
 img {
@@ -732,7 +743,7 @@ img {
   background-image: url("../images/quad-blurred.png");
 }
 .offers__img--transport::before {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.2);
 }
 .offers__img--transport img {
   -o-object-position: left bottom;
@@ -805,6 +816,37 @@ img {
   font-family: var(--secondaryFont);
   line-height: 150%;
   color: var(--textColor);
+}
+
+.gallery {
+  position: relative;
+  background-color: var(--galleryBg);
+}
+.gallery.section-padding {
+  padding: 8em 2em 20em;
+}
+.gallery__slider {
+  position: relative;
+  box-shadow: 3px 3px 10px rgba(46, 46, 46, 0.1803921569);
+  border: 10px solid #fff;
+}
+.gallery__slider:hover .gallery__icon {
+  opacity: 0.8;
+}
+.gallery__img {
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  max-height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  filter: brightness(0.7);
+}
+.gallery__img-desktop {
+  display: none;
+}
+.gallery__img.animated {
+  animation: fadeIn 1.5s ease-in forwards;
 }
 
 .contact {
@@ -896,6 +938,10 @@ img {
   }
   .offers__info {
     font-size: 1.3rem;
+  }
+  .gallery__img {
+    min-height: 400px;
+    max-height: 400px;
   }
   .contact__box-title, .contact__box-data {
     font-size: 2.4rem;
@@ -1027,6 +1073,19 @@ img {
     width: 45%;
     margin: 5em 1em;
   }
+  .gallery.section-padding {
+    padding: 10em 2em 22em;
+  }
+  .gallery__img {
+    min-height: 600px;
+    max-height: 600px;
+  }
+  .gallery__img-mobile {
+    display: none;
+  }
+  .gallery__img-desktop {
+    display: block;
+  }
 }
 @media (min-width: 768px) {
   .header__info-text {
@@ -1122,6 +1181,12 @@ img {
   }
   .offers__text {
     font-size: 1.55rem;
+  }
+  .gallery.section-padding {
+    padding: 12em 2em 25em;
+  }
+  .gallery__img {
+    max-height: 500px;
   }
   .contact__box {
     text-align: left;
@@ -1306,6 +1371,9 @@ img {
   }
   .offers__img img {
     transition: transform 0.3s;
+  }
+  .gallery__img {
+    max-height: 700px;
   }
   .contact__box-title, .contact__box-data {
     font-size: 2.4rem;
