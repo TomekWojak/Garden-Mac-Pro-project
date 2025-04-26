@@ -1,363 +1,537 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="koszenie trawy, usuwanie liści, praca przy drewnie, prace ogrodowe, malowanie, drobne prace budowlane, pielęgnacja ogrodu, prace porządkowe, wycinka drzew, remonty, prace malarskie, usługi budowlane, pielęgnacja terenów zielonych, koszenie, ogrodnictwo, usługi remontowe, prace naprawcze, wykończenia wnętrz">
-    <meta name="description" content="Oferujemy kompleksowe usługi ogrodnicze i budowlane, w tym koszenie trawy, usuwanie liści, prace przy drewnie, malowanie oraz drobne prace budowlane. Zajmujemy się także pielęgnacją ogrodów i terenów zielonych, zapewniając profesjonalizm i wysoką jakość usług w przystępnych cenach.">
+    <meta name="keywords"
+        content="koszenie trawy, usuwanie liści, praca przy drewnie, prace ogrodowe, malowanie, drobne prace budowlane, pielęgnacja ogrodu, prace porządkowe, wycinka drzew, remonty, prace malarskie, usługi budowlane, pielęgnacja terenów zielonych, koszenie, ogrodnictwo, usługi remontowe, prace naprawcze, wykończenia wnętrz">
+    <meta name="description"
+        content="Oferujemy kompleksowe usługi ogrodnicze i budowlane, w tym koszenie trawy, usuwanie liści, prace przy drewnie, malowanie oraz drobne prace budowlane. Zajmujemy się także pielęgnacją ogrodów i terenów zielonych, zapewniając profesjonalizm i wysoką jakość usług w przystępnych cenach.">
     <title>Garden Care</title>
     <link rel="icon" href="./images/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
-<link rel="stylesheet" href="./css/style.css">
-<script src="https://kit.fontawesome.com/cdbdae0066.js" crossorigin="anonymous" defer></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://kit.fontawesome.com/cdbdae0066.js" crossorigin="anonymous" defer></script>
 </head>
+
 <body>
-<nav class="nav">
-    <div class="wrapper">
-        <a href="/" class="nav__logo">
-            <img src="./images/garden-care-logo.png" width="130" height="47" alt="Logo strony Garden Care">
-        </a>
-        <button class="nav__toggle-btn" aria-expanded="false" aria-controls="mobile-navigation" aria-label="Przycisk kontrolujący nawigację boczną">
-            <span class="nav__toggle-bar nav__toggle-bar--top"></span>
-            <span class="nav__toggle-bar nav__toggle-bar--middle"></span>
-            <span class="nav__toggle-bar nav__toggle-bar--bottom"></span>
-        </button>
-        <ul class="nav__mobile" id="mobile-navigation" aria-label="Nawigacja boczna" aria-expanded="false" inert="true">
-            <li class="nav__mobile-item"><a href="#services" class="nav__mobile-link">Usługi</a></li>
-            <li class="nav__mobile-item"><a href="#contact" class="nav__mobile-link">Kontakt</a></li>
-            <li class="nav__mobile-item"><a href="#about" class="nav__mobile-link">O nas</a></li>
-            <button class="mode-switcher mode-switcher-mobile" aria-label="Przycisk umożliwiający zmianę motywu strony"><svg class="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#9a2222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg> <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2fd363" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></button>
-            <div class="nav__mobile-social">
-                <a target="_blank" href="https://www.facebook.com/maciekwojak32?locale=pl_PL" class="nav__mobile-icon"><i class="fa-brands fa-square-facebook"></i></a>
-            </div>
-        </ul>
-        <ul class="nav__desktop" aria-label="Nawigacja główna">
-            <li class="nav__desktop-item"><a href="#services" class="nav__desktop-link">Usługi</a></li>
-            <li class="nav__desktop-item"><a href="#contact" class="nav__desktop-link">Kontakt</a></li>
-            <li class="nav__desktop-item"><a href="#about" class="nav__desktop-link">O nas</a></li>
-        </ul>
+    <nav class="nav">
+        <div class="wrapper">
+            <a href="/" class="nav__logo">
+                <img src="./images/garden-care-logo.png" width="130" height="47" alt="Logo strony Garden Care">
+            </a>
+            <button class="nav__toggle-btn" aria-expanded="false" aria-controls="mobile-navigation"
+                aria-label="Przycisk kontrolujący nawigację boczną">
+                <span class="nav__toggle-bar nav__toggle-bar--top"></span>
+                <span class="nav__toggle-bar nav__toggle-bar--middle"></span>
+                <span class="nav__toggle-bar nav__toggle-bar--bottom"></span>
+            </button>
+            <ul class="nav__mobile" id="mobile-navigation" aria-label="Nawigacja boczna" aria-expanded="false"
+                inert="true">
+                <li class="nav__mobile-item"><a href="#services" class="nav__mobile-link">Usługi</a></li>
+                <li class="nav__mobile-item"><a href="#contact" class="nav__mobile-link">Kontakt</a></li>
+                <li class="nav__mobile-item"><a href="#about" class="nav__mobile-link">O nas</a></li>
+                <button class="mode-switcher mode-switcher-mobile"
+                    aria-label="Przycisk umożliwiający zmianę motywu strony"><svg class="sun"
+                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="#9a2222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-sun">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg> <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24" fill="none" stroke="#2fd363" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="feather feather-moon">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg></button>
+                <div class="nav__mobile-social">
+                    <a target="_blank" href="https://www.facebook.com/maciekwojak32?locale=pl_PL"
+                        class="nav__mobile-icon"><i class="fa-brands fa-square-facebook"></i></a>
+                </div>
+            </ul>
+            <ul class="nav__desktop" aria-label="Nawigacja główna">
+                <li class="nav__desktop-item"><a href="#services" class="nav__desktop-link">Usługi</a></li>
+                <li class="nav__desktop-item"><a href="#contact" class="nav__desktop-link">Kontakt</a></li>
+                <li class="nav__desktop-item"><a href="#about" class="nav__desktop-link">O nas</a></li>
+            </ul>
 
-        <button class="mode-switcher mode-switcher-desktop" aria-label="Przycisk umożliwiający zmianę motywu strony"><svg class="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#9a2222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg> <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2fd363" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></button>
-        <div class="tooltip"><p class="tooltip-text"></p></div>
-    </div>
-</nav>
-<header class="header">
-    <div class="header__bg header__bg--wood">
-        <picture>
-            <source srcset="./images/wood-mobile.jpg" media="(max-width: 992px)">
-            <img src="./images/wood-desktop.jpg" width="1280" height="853" alt="Obrazek przedstawia kawałki drewna estetycznie ułożonego w stos">
-          </picture>
-    </div>
-    <div class="header__bg header__bg--leaves">
-        <picture>
-            <source srcset="./images/leaves-mobile.jpg" media="(max-width: 992px)">
-            <img src="./images/leaves-desktop.jpg" width="1255" height="835" alt="Obraz przedstawiający mnóstwo liści w odcieniach pomarańczowym i brązowym, a także pomarańczowe grabie">
-          </picture>
-    </div>
-    <div class="header__bg header__bg--painting">
-        <picture>
-            <source srcset="./images/painting-mobile.jpg" media="(max-width: 992px)">
-            <img src="./images/painting-desktop.jpg" width="1254" height="836" alt="Obraz przedstawiający drewniany płot, a także czyjąś rękę trzymającą żółty pędzel i starannie malującą ów płot brązową farbą">
-          </picture>
-    </div> 
-    <div class="header__content">
-        <div class="header__text">
-            <h1 data-aos="fade-up" data-aos-duration="600" class="header__title"><span class="accent-text">Gwarancja</span> jakości,
-            <span data-aos="fade-up" data-aos-delay="200" data-aos-duration="600" class="header__title">niezawodności,</span>
-            <span data-aos="fade-up" data-aos-delay="400" data-aos-duration="600" class="header__title">solidności</span></h1>
-            <a href="#offers" data-aos="fade-up" role="button" class="header__btn">zobacz ofertę</a>
-        </div>
-        <div data-aos="fade-left" data-aos-delay="800" data-aos-duration="400" class="header__info">
-            <div class="header__box">
-                <img loading="lazy" width="17" height="17" src="./images/star-light.svg" alt="" class="light-visible">
-                <img loading="lazy" width="17" height="17" src="./images/star-light.svg" alt="" class="light-visible">
-                <img loading="lazy" width="17" height="17" src="./images/star-light.svg" alt="" class="light-visible">
-
-                <img loading="lazy" width="17" height="17" src="./images/star-dark.svg" alt="" class="dark-visible">
-                <img loading="lazy" width="17" height="17" src="./images/star-dark.svg" alt="" class="dark-visible">
-                <img loading="lazy" width="17" height="17" src="./images/star-dark.svg" alt="" class="dark-visible">
-                <p class="header__info-text">szeroki zakres usług</p>
-            </div>
-            <div class="header__box">
-                <img loading="lazy" width="17" height="17" src="./images/star-light.svg" alt="" class="light-visible">
-                <img loading="lazy" width="17" height="17" src="./images/star-light.svg" alt="" class="light-visible">
-                <img loading="lazy" width="17" height="17" src="./images/star-light.svg" alt="" class="light-visible">
-
-                
-                <img loading="lazy" width="17" height="17" src="./images/star-dark.svg" alt="" class="dark-visible">
-                <img loading="lazy" width="17" height="17" src="./images/star-dark.svg" alt="" class="dark-visible">
-                <img loading="lazy" width="17" height="17" src="./images/star-dark.svg" alt="" class="dark-visible">
-                <p class="header__info-text">zawsze na czas</p>
-            </div>
-            <div class="header__box">
-                <img loading="lazy" width="17" height="17" src="./images/star-light.svg" alt="" class="light-visible">
-                <img loading="lazy" width="17" height="17" src="./images/star-light.svg" alt="" class="light-visible">
-                <img loading="lazy" width="17" height="17" src="./images/star-light.svg" alt="" class="light-visible">
-
-                
-                <img loading="lazy" width="17" height="17" src="./images/star-dark.svg" alt="" class="dark-visible">
-                <img loading="lazy" width="17" height="17" src="./images/star-dark.svg" alt="" class="dark-visible">
-                <img loading="lazy" width="17" height="17" src="./images/star-dark.svg" alt="" class="dark-visible">
-                <p class="header__info-text">sprzęt najwyższej jakości</p>
+            <button class="mode-switcher mode-switcher-desktop"
+                aria-label="Przycisk umożliwiający zmianę motywu strony"><svg class="sun"
+                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="#9a2222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-sun">
+                    <circle cx="12" cy="12" r="5"></circle>
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </svg> <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    fill="none" stroke="#2fd363" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="feather feather-moon">
+                    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg></button>
+            <div class="tooltip">
+                <p class="tooltip-text"></p>
             </div>
         </div>
-    </div>
-</header>
-<main>
-    <section class="services section-padding" id="services">
-        <div class="services__box wrapper">
-            <div class="services__img">
-                <picture>
-                    <source srcset="./images/services-img-mobile.jpg" media="(max-width: 768px)">
-                    <img src="./images/services-img-desktop.jpg" width="1280" height="854" alt="Obrazek przedstawia piękny, zielony ogród pełen kwiatów z drewnianą altanką w samym jego centrum">
-                  </picture>
+    </nav>
+    <header class="header">
+        <div class="header__bg header__bg--wood">
+            <picture>
+                <source srcset="./images/wood-mobile.jpg" media="(max-width: 992px)">
+                <img src="./images/wood-desktop.jpg" width="1280" height="853"
+                    alt="Obrazek przedstawia kawałki drewna estetycznie ułożonego w stos">
+            </picture>
+        </div>
+        <div class="header__bg header__bg--leaves">
+            <picture>
+                <source srcset="./images/leaves-mobile.jpg" media="(max-width: 992px)">
+                <img src="./images/leaves-desktop.jpg" width="1255" height="835"
+                    alt="Obraz przedstawiający mnóstwo liści w odcieniach pomarańczowym i brązowym, a także pomarańczowe grabie">
+            </picture>
+        </div>
+        <div class="header__bg header__bg--painting">
+            <picture>
+                <source srcset="./images/painting-mobile.jpg" media="(max-width: 992px)">
+                <img src="./images/painting-desktop.jpg" width="1254" height="836"
+                    alt="Obraz przedstawiający drewniany płot, a także czyjąś rękę trzymającą żółty pędzel i starannie malującą ów płot brązową farbą">
+            </picture>
+        </div>
+        <div class="header__content">
+            <div class="header__text">
+                <h1 data-aos="fade-up" data-aos-duration="600" class="header__title"><span
+                        class="accent-text">Gwarancja</span> jakości,
+                    <span data-aos="fade-up" data-aos-delay="200" data-aos-duration="600"
+                        class="header__title">niezawodności,</span>
+                    <span data-aos="fade-up" data-aos-delay="400" data-aos-duration="600"
+                        class="header__title">solidności</span>
+                </h1>
+                <a href="#offers" data-aos="fade-up" role="button" class="header__btn">zobacz ofertę</a>
             </div>
-            <div class="services__content">
-                <h2 class="section-title"><span class="underline-text">Zakres</span> <span class="accent-text">usług</span></h2>
-                <div class="services__item">
-                    <div class="services__checkbox">
-                        <img src="./images/check-light.svg" width="24" height="24" loading="lazy" alt="" class="light-visible">
-                        <img src="./images/check-dark.svg" width="24" height="24" loading="lazy" alt="" class="dark-visible">
+            <div data-aos="fade-left" data-aos-delay="800" data-aos-duration="400" class="header__info">
+                <div class="header__box">
+                    <img loading="lazy" width="17" height="17" src="./images/star-light.svg" alt=""
+                        class="light-visible">
+                    <img loading="lazy" width="17" height="17" src="./images/star-light.svg" alt=""
+                        class="light-visible">
+                    <img loading="lazy" width="17" height="17" src="./images/star-light.svg" alt=""
+                        class="light-visible">
+
+                    <img loading="lazy" width="17" height="17" src="./images/star-dark.svg" alt="" class="dark-visible">
+                    <img loading="lazy" width="17" height="17" src="./images/star-dark.svg" alt="" class="dark-visible">
+                    <img loading="lazy" width="17" height="17" src="./images/star-dark.svg" alt="" class="dark-visible">
+                    <p class="header__info-text">szeroki zakres usług</p>
+                </div>
+                <div class="header__box">
+                    <img loading="lazy" width="17" height="17" src="./images/star-light.svg" alt=""
+                        class="light-visible">
+                    <img loading="lazy" width="17" height="17" src="./images/star-light.svg" alt=""
+                        class="light-visible">
+                    <img loading="lazy" width="17" height="17" src="./images/star-light.svg" alt=""
+                        class="light-visible">
+
+
+                    <img loading="lazy" width="17" height="17" src="./images/star-dark.svg" alt="" class="dark-visible">
+                    <img loading="lazy" width="17" height="17" src="./images/star-dark.svg" alt="" class="dark-visible">
+                    <img loading="lazy" width="17" height="17" src="./images/star-dark.svg" alt="" class="dark-visible">
+                    <p class="header__info-text">zawsze na czas</p>
+                </div>
+                <div class="header__box">
+                    <img loading="lazy" width="17" height="17" src="./images/star-light.svg" alt=""
+                        class="light-visible">
+                    <img loading="lazy" width="17" height="17" src="./images/star-light.svg" alt=""
+                        class="light-visible">
+                    <img loading="lazy" width="17" height="17" src="./images/star-light.svg" alt=""
+                        class="light-visible">
+
+
+                    <img loading="lazy" width="17" height="17" src="./images/star-dark.svg" alt="" class="dark-visible">
+                    <img loading="lazy" width="17" height="17" src="./images/star-dark.svg" alt="" class="dark-visible">
+                    <img loading="lazy" width="17" height="17" src="./images/star-dark.svg" alt="" class="dark-visible">
+                    <p class="header__info-text">sprzęt najwyższej jakości</p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="services section-padding" id="services">
+            <div class="services__box wrapper">
+                <div class="services__img">
+                    <picture>
+                        <source srcset="./images/services-img-mobile.jpg" media="(max-width: 768px)">
+                        <img src="./images/services-img-desktop.jpg" width="1280" height="854"
+                            alt="Obrazek przedstawia piękny, zielony ogród pełen kwiatów z drewnianą altanką w samym jego centrum">
+                    </picture>
+                </div>
+                <div class="services__content">
+                    <h2 class="section-title"><span class="underline-text">Zakres</span> <span
+                            class="accent-text">usług</span></h2>
+                    <div class="services__item">
+                        <div class="services__checkbox">
+                            <img src="./images/check-light.svg" width="24" height="24" loading="lazy" alt=""
+                                class="light-visible">
+                            <img src="./images/check-dark.svg" width="24" height="24" loading="lazy" alt=""
+                                class="dark-visible">
+                        </div>
+                        <p class="services__text">Koszenie trawy i usuwanie liści</p>
                     </div>
-                    <p class="services__text">Koszenie trawy i usuwanie liści</p>
-                </div>
-                <div class="services__item">
-                    <div class="services__checkbox">
-                        <img src="./images/check-light.svg" width="24" height="24" loading="lazy" alt="" class="light-visible">
-                        <img src="./images/check-dark.svg" width="24" height="24" loading="lazy" alt="" class="dark-visible">
+                    <div class="services__item">
+                        <div class="services__checkbox">
+                            <img src="./images/check-light.svg" width="24" height="24" loading="lazy" alt=""
+                                class="light-visible">
+                            <img src="./images/check-dark.svg" width="24" height="24" loading="lazy" alt=""
+                                class="dark-visible">
+                        </div>
+                        <p class="services__text">Prace przy drewnie</p>
                     </div>
-                    <p class="services__text">Prace przy drewnie</p>
-                </div>
-                <div class="services__item">
-                    <div class="services__checkbox">
-                        <img src="./images/check-light.svg" width="24" height="24" loading="lazy" alt="" class="light-visible">
-                        <img src="./images/check-dark.svg" width="24" height="24" loading="lazy" alt="" class="dark-visible">
+                    <div class="services__item">
+                        <div class="services__checkbox">
+                            <img src="./images/check-light.svg" width="24" height="24" loading="lazy" alt=""
+                                class="light-visible">
+                            <img src="./images/check-dark.svg" width="24" height="24" loading="lazy" alt=""
+                                class="dark-visible">
+                        </div>
+                        <p class="services__text">Malowanie powierzchni</p>
                     </div>
-                    <p class="services__text">Malowanie powierzchni</p>
-                </div>
-                <div class="services__item">
-                    <div class="services__checkbox">
-                        <img src="./images/check-light.svg" width="24" height="24" loading="lazy" alt="" class="light-visible">
-                        <img src="./images/check-dark.svg" width="24" height="24" loading="lazy" alt="" class="dark-visible">
+                    <div class="services__item">
+                        <div class="services__checkbox">
+                            <img src="./images/check-light.svg" width="24" height="24" loading="lazy" alt=""
+                                class="light-visible">
+                            <img src="./images/check-dark.svg" width="24" height="24" loading="lazy" alt=""
+                                class="dark-visible">
+                        </div>
+                        <p class="services__text">Drobne prace budowlane</p>
                     </div>
-                    <p class="services__text">Drobne prace budowlane</p>
-                </div>
-                <div class="services__item">
-                    <div class="services__checkbox">
-                        <img src="./images/check-light.svg" width="24" height="24" loading="lazy" alt="" class="light-visible">
-                        <img src="./images/check-dark.svg" width="24" height="24" loading="lazy" alt="" class="dark-visible">
+                    <div class="services__item">
+                        <div class="services__checkbox">
+                            <img src="./images/check-light.svg" width="24" height="24" loading="lazy" alt=""
+                                class="light-visible">
+                            <img src="./images/check-dark.svg" width="24" height="24" loading="lazy" alt=""
+                                class="dark-visible">
+                        </div>
+                        <p class="services__text">Prace ogrodowe</p>
                     </div>
-                    <p class="services__text">Prace ogrodowe</p>
-                </div>
-                <div class="services__item">
-                    <div class="services__checkbox">
-                        <img src="./images/check-light.svg" width="24" height="24" loading="lazy" alt="" class="light-visible">
-                        <img src="./images/check-dark.svg" width="24" height="24" loading="lazy" alt="" class="dark-visible">
+                    <div class="services__item">
+                        <div class="services__checkbox">
+                            <img src="./images/check-light.svg" width="24" height="24" loading="lazy" alt=""
+                                class="light-visible">
+                            <img src="./images/check-dark.svg" width="24" height="24" loading="lazy" alt=""
+                                class="dark-visible">
+                        </div>
+                        <p class="services__text">Lokalny transport materiałów</p>
                     </div>
-                    <p class="services__text">Lokalny transport materiałów</p>
+                    <img src="./images/canadian-maple-leaf-brands.svg" loading="lazy" width="150" height="150" alt=""
+                        class="services__content-bg">
                 </div>
-                <img src="./images/canadian-maple-leaf-brands.svg" loading="lazy" width="150" height="150" alt="" class="services__content-bg">
             </div>
-        </div>
-    </section>
-    <section class="offers section-padding" id="offers">
-        <div class="line"><div class="square"></div></div>
-        <div class="offers__box wrapper">
-            <div class="offers__offer">
-                <div class="offers__img offers__img--mowing">
-                    <picture>
-                        <source srcset="./images/mowing-mobile.jpg" media="(max-width: 768px)">
-                        <img src="./images/mowing-desktop.jpg" width="1254" height="837" loading="lazy" alt="Obrazek przedstawia starannie skoszony trawnik, w tle las a na pierwszym planie kosiarkę typu traktorek, którą ów trawnik został skoszony">
-                      </picture>
+        </section>
+        <section class="offers section-padding" id="offers">
+            <div class="line">
+                <div class="square"></div>
+            </div>
+            <div class="offers__box wrapper">
+                <div class="offers__offer">
+                    <div class="offers__img offers__img--mowing">
+                        <picture>
+                            <source srcset="./images/mowing-mobile.jpg" media="(max-width: 768px)">
+                            <img src="./images/mowing-desktop.jpg" width="1254" height="837" loading="lazy"
+                                alt="Obrazek przedstawia starannie skoszony trawnik, w tle las a na pierwszym planie kosiarkę typu traktorek, którą ów trawnik został skoszony">
+                        </picture>
+                    </div>
+                    <div class="offers__content">
+                        <h3 class="offers__title"><span class="accent-text">Koszenie trawników</span> - od małych
+                            działek po rozległe posesje</h3>
+                        <p class="offers__text">Oferujmy koszenie trawy na działkach, podwórkach i większych terenach.
+                            Pracujemy sprawnie i dokładnie, korzystając ze sprawdzonego sprzętu. Dbamy o estetyczny
+                            wygląd terenu i rzetelnie wykonujemy swoją pracę. Ciesz się zadbanym otoczeniem – my
+                            zajmiemy się wszystkim, łącznie z wywozem skoszonej trawy.
+                        </p>
+                    </div>
                 </div>
-                <div class="offers__content">
-                    <h3 class="offers__title"><span class="accent-text">Koszenie trawników</span> - od małych działek po rozległe posesje</h3>
-                    <p class="offers__text">Oferujmy koszenie trawy na działkach, podwórkach i większych terenach. Pracujemy sprawnie i dokładnie, korzystając ze sprawdzonego sprzętu. Dbamy o estetyczny wygląd terenu i rzetelnie wykonujemy swoją pracę. Ciesz się zadbanym otoczeniem – my zajmiemy się wszystkim, łącznie z wywozem skoszonej trawy.
+                <div class="offers__offer">
+                    <div class="offers__img offers__img--cleaningLeaves">
+                        <picture>
+                            <source srcset="./images/cleaning-leaves-mobile" media="(max-width: 768px)">
+                            <img src="./images/cleaning-leaves-desktop.jpg" width="1254" height="837" loading="lazy"
+                                alt="Obrazek przedstawia mały stos liści oraz grabie oparte o drzewo">
+                        </picture>
+                    </div>
+                    <div class="offers__content">
+                        <h3 class="offers__title"><span class="accent-text">Oczyszczanie terenu z liści</span> – szybko,
+                            skutecznie, bez śladu</h3>
+                        <p class="offers__text">Oczyszczamy trawniki, ścieżki i inne powierzchnie z liści przy użyciu
+                            różnorodnego sprzętu, dbając o schludny wygląd otoczenia. Zaufaj nam i ciesz się porządkiem
+                            w ogrodzie przez cały sezon!
+                        </p>
+                    </div>
+                </div>
+                <div class="offers__offer">
+                    <div class="offers__img offers__img--wood">
+                        <picture>
+                            <source srcset="./images/wood-work-mobile.jpg" media="(max-width: 768px)">
+                            <img src="./images/wood-work-desktop.jpg" width="1254" height="837" loading="lazy"
+                                alt="Obrazek przedstawia schludnie wyglądający ogród oraz piękną, wykonaną ręcznie drewnianą konstrukcję - stolik oraz siedzenia">
+                        </picture>
+                    </div>
+                    <div class="offers__content">
+                        <h3 class="offers__title"><span class="accent-text">Prace przy drewnie</span> – porządek i
+                            funkcjonalność w Twoim ogrodzie</h3>
+                        <p class="offers__text">Specjalizujemy się w pracy z drewnem – od porządkowania lasów i wycinki
+                            drzew, po tworzenie wyjątkowych elementów. Każdy kawałek drewna w naszych rękach zyskuje
+                            nowe życie, stając się zarówno ozdobą, jak i użytecznym dodatkiem do przestrzeni wokół domu.
+                            Tworzymy z pasją, dbając o naturę i estetykę.
+                        </p>
+                    </div>
+                </div>
+                <div class="offers__offer">
+                    <div class="offers__img offers__img--garden">
+                        <picture>
+                            <source srcset="./images/garden-work-mobile.jpg" media="(max-width: 768px)">
+                            <img src="./images/garden-work-desktop.jpg" width="1254" height="837" loading="lazy"
+                                alt="Obrazek przedstawia niebieskie sekatory, którymi ktoś usiłuje przeciąć grubą gałąź jakiegoś drzewa">
+                        </picture>
+                    </div>
+                    <div class="offers__content">
+                        <h3 class="offers__title"><span class="accent-text">Prace ogrodowe</span> – Twój ogród w
+                            najlepszej formie</h3>
+                        <p class="offers__text">Nie masz czasu na pielęgnację ogrodu? My się tym zajmiemy! Przycinanie
+                            gałęzi, żywopłotu, ogólna pielęgnacja lub inne drobne prace – wykonamy je szybko i
+                            dokładnie, aby Twój ogród wyglądał pięknie przez cały rok. Zadbaj o swój zielony zakątek bez
+                            wysiłku.
+                        </p>
+                    </div>
+                </div>
+                <div class="offers__offer">
+                    <div class="offers__img offers__img--brush">
+                        <picture>
+                            <source srcset="./images/brush-mobile.jpg" media="(max-width: 768px)">
+                            <img src="./images/brush-desktop.jpg" width="1254" height="837" loading="lazy"
+                                alt="Obrazek przedstawia puszkę z farbą oraz pędzel leżący na drewnianym stoliku">
+                        </picture>
+                    </div>
+                    <div class="offers__content">
+                        <h3 class="offers__title"><span class="accent-text">Malowanie</span> płotów, altanek i
+                            konstrukcji drewnianych</h3>
+                        <p class="offers__text">Zadbaj o estetykę i trwałość swojego ogrodu! Malujemy płoty, altany,
+                            pergole i inne drewniane konstrukcje, chroniąc je przed warunkami atmosferycznymi i nadając
+                            im świeży wygląd.
+                        </p>
+                    </div>
+                </div>
+                <div class="offers__offer">
+                    <div class="offers__img offers__img--paving">
+                        <picture>
+                            <source srcset="./images/paving-mobile.jpg" media="(max-width: 768px)">
+                            <img src="./images/paving-desktop.jpg" width="1254" height="837" loading="lazy"
+                                alt="Obrazek przedstawia proces układania kostki brukowej">
+                        </picture>
+                    </div>
+                    <div class="offers__content">
+                        <h3 class="offers__title"><span class="accent-text">Drobne prace budowlane</span> – solidność i
+                            estetyka w Twoim ogrodzie</h3>
+                        <p class="offers__text">Wykonujemy prace związane z fundamentami, podmurówkami oraz wykładaniem
+                            nawierzchni z kamienia lub kostki. Oferujemy również czyszczenie brukowanych powierzchni,
+                            przywracając im świeży wygląd. Dzięki naszym usługom przestrzeń wokół zyska estetyczny oraz
+                            trwały wygląd.
+                        </p>
+                    </div>
+                </div>
+                <div class="offers__offer">
+                    <div class="offers__img offers__img--transport">
+                        <picture>
+                            <source srcset="./images/quad-mobile.png" media="(max-width: 768px)">
+                            <img src="./images/quad-desktop.png" width="1254" height="837" loading="lazy"
+                                alt="Obrazek przedstawia dobrze wyposażonego quada z załączoną do niego przyczepką">
+                        </picture>
+                    </div>
+                    <div class="offers__content">
+                        <h3 class="offers__title"><span class="accent-text">Transport materiałów</span> quadem z
+                            przyczepką – szybki i elastyczny sposób</h3>
+                        <p class="offers__text">Potrzebujesz transportu ziemi, drewna, gałęzi lub innych materiałów?
+                            Nasza usługa transportu jest doskonałym wyborem! Zapewniamy sprawny i bezpieczny transport,
+                            a dzięki tej formie przewozu dotrzemy z materiałami nawet w miejsca, do których nie wjedzie
+                            większy pojazd.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="divider"></div>
+            <p class="offers__info">To tylko przykłady naszych usług – realizujemy również inne, dostosowane do <span
+                    class="accent-text">indywidualnych</span> potrzeb.</p>
+            <p class="offers__info">Masz inny pomysł lub potrzebujesz czegoś wyjątkowego? <a href="#contact"
+                    class="offers__link">Skontaktuj się</a> z nami!
+        </section>
+        <section class="about section-padding" id="about">
+            <h2 class="section-title"><span class="underline-text">co nas</span> <span
+                    class="accent-text">wyróżnia</span></h2>
+            <div class="about__box wrapper">
+                <div data-aos="zoom-in" data-aos-delay="50" class="about__info">
+                    <i class="fa-solid fa-rocket about__info-icon"></i>
+                    <h3 class="about__info-title">gotowość na wyzwania</h3>
+                    <p class="about__info-text">Podejmujemy się zarówno standardowych, jak i nietypowych zleceń – nie
+                        boimy się nowych wyzwań!</p>
+                </div>
+                <div data-aos="zoom-in" data-aos-delay="150" class="about__info">
+                    <i class="fa-solid fa-clock about__info-icon"></i>
+                    <h3 class="about__info-title">terminowość</h3>
+                    <p class="about__info-text">Szanujemy Twój czas – każde zlecenie wykonujemy terminowo i bez opóźnień
                     </p>
                 </div>
-            </div>
-            <div class="offers__offer">
-                <div class="offers__img offers__img--rake">
-                    <picture>
-                        <source srcset="./images/rake-mobile.jpg" media="(max-width: 768px)">
-                        <img src="./images/rake-desktop.jpg" width="1254" height="837" loading="lazy" alt="Obrazek przedstawia mały stos liści oraz grabie oparte o drzewo">
-                      </picture>
+                <div data-aos="zoom-in" data-aos-delay="100" class="about__info">
+                    <i class="fa-solid fa-dollar-sign about__info-icon"></i>
+                    <h3 class="about__info-title">przystępne ceny</h3>
+                    <p class="about__info-text">Usługi w rozsądnej cenie – uczciwa wycena każdego zlecenia.</p>
                 </div>
-                <div class="offers__content">
-                    <h3 class="offers__title"><span class="accent-text">Oczyszczanie terenu z liści</span> – szybko, skutecznie, bez śladu</h3>
-                    <p class="offers__text">Oczyszczamy trawniki, ścieżki i inne powierzchnie z liści przy użyciu różnorodnego sprzętu, dbając o schludny wygląd otoczenia. Zaufaj nam i ciesz się porządkiem w ogrodzie przez cały sezon!
-                    </p>
+                <div data-aos="zoom-in" data-aos-delay="300" class="about__info">
+                    <i class="fa-solid fa-screwdriver-wrench about__info-icon"></i>
+                    <h3 class="about__info-title">szeroki zakres usług</h3>
+                    <p class="about__info-text">Świadczymy kompleksowe usługi ogrodnicze i budowlane, dostosowane do
+                        indywidualnych potrzeb klientów.</p>
                 </div>
-            </div>
-            <div class="offers__offer">
-                <div class="offers__img offers__img--wood">
-                    <picture>
-                        <source srcset="./images/wood-work-mobile.jpg" media="(max-width: 768px)">
-                        <img src="./images/wood-work-desktop.jpg" width="1254" height="837" loading="lazy" alt="Obrazek przedstawia schludnie wyglądający ogród oraz piękną, wykonaną ręcznie drewnianą konstrukcję - stolik oraz siedzenia">
-                      </picture>
+                <div data-aos="zoom-in" data-aos-delay="200" class="about__info">
+                    <i class="fa-solid fa-face-smile about__info-icon"></i>
+                    <h3 class="about__info-title">zadowoleni klienci</h3>
+                    <p class="about__info-text">Twoja satysfakcja to nasz priorytet – dbamy o jakość i dokładność.</p>
                 </div>
-                <div class="offers__content">
-                    <h3 class="offers__title"><span class="accent-text">Prace przy drewnie</span> –  porządek i funkcjonalność w Twoim ogrodzie</h3>
-                    <p class="offers__text">Specjalizujemy się w pracy z drewnem – od porządkowania lasów i wycinki drzew, po tworzenie wyjątkowych elementów. Każdy kawałek drewna w naszych rękach zyskuje nowe życie, stając się zarówno ozdobą, jak i użytecznym dodatkiem do przestrzeni wokół domu. Tworzymy z pasją, dbając o naturę i estetykę.
-                    </p>
+                <div data-aos="zoom-in" data-aos-delay="250" class="about__info">
+                    <i class="fa-solid fa-location-dot about__info-icon"></i>
+                    <h3 class="about__info-title">Mobilność i dostępność</h3>
+                    <p class="about__info-text">Docieramy tam, gdzie nas potrzebujesz, niezależnie od lokalizacji.</p>
                 </div>
             </div>
-            <div class="offers__offer">
-                <div class="offers__img offers__img--garden">
-                    <picture>
-                        <source srcset="./images/garden-work-mobile.jpg" media="(max-width: 768px)">
-                        <img src="./images/garden-work-desktop.jpg" width="1254" height="837" loading="lazy" alt="Obrazek przedstawia niebieskie sekatory, którymi ktoś usiłuje przeciąć grubą gałąź jakiegoś drzewa">
-                      </picture>
-                </div>
-                <div class="offers__content">
-                    <h3 class="offers__title"><span class="accent-text">Prace ogrodowe</span> – Twój ogród w najlepszej formie</h3>
-                    <p class="offers__text">Nie masz czasu na pielęgnację ogrodu? My się tym zajmiemy! Przycinanie gałęzi, żywopłotu, ogólna pielęgnacja lub inne drobne prace – wykonamy je szybko i dokładnie, aby Twój ogród wyglądał pięknie przez cały rok. Zadbaj o swój zielony zakątek bez wysiłku.
-                    </p>
-                </div>
+            <div class="line">
+                <div class="square"></div>
             </div>
-            <div class="offers__offer">
-                <div class="offers__img offers__img--brush">
-                    <picture>
-                        <source srcset="./images/brush-mobile.jpg" media="(max-width: 768px)">
-                        <img src="./images/brush-desktop.jpg" width="1254" height="837" loading="lazy" alt="Obrazek przedstawia puszkę z farbą oraz pędzel leżący na drewnianym stoliku">
-                      </picture>
-                </div>
-                <div class="offers__content">
-                    <h3 class="offers__title"><span class="accent-text">Malowanie</span> płotów, altanek i konstrukcji drewnianych</h3>
-                    <p class="offers__text">Zadbaj o estetykę i trwałość swojego ogrodu! Malujemy płoty, altany, pergole i inne drewniane konstrukcje, chroniąc je przed warunkami atmosferycznymi i nadając im świeży wygląd.
-                    </p>
-                </div>
-            </div>
-            <div class="offers__offer">
-                <div class="offers__img offers__img--paving">
-                    <picture>
-                        <source srcset="./images/paving-mobile.jpg" media="(max-width: 768px)">
-                        <img src="./images/paving-desktop.jpg" width="1254" height="837" loading="lazy" alt="Obrazek przedstawia proces układania kostki brukowej">
-                      </picture>
-                </div>
-                <div class="offers__content">
-                    <h3 class="offers__title"><span class="accent-text">Drobne prace budowlane</span> – solidność i estetyka w Twoim ogrodzie</h3>
-                    <p class="offers__text">Wykonujemy prace związane z fundamentami, podmurówkami oraz wykładaniem nawierzchni z kamienia lub kostki. Oferujemy również czyszczenie brukowanych powierzchni, przywracając im świeży wygląd. Dzięki naszym usługom przestrzeń wokół zyska estetyczny oraz trwały wygląd.
-                    </p>
-                </div>
-            </div>
-            <div class="offers__offer">
-                <div class="offers__img offers__img--transport">
-                    <picture>
-                        <source srcset="./images/quad-mobile.png" media="(max-width: 768px)">
-                        <img src="./images/quad-desktop.png" width="1254" height="837" loading="lazy" alt="Obrazek przedstawia dobrze wyposażonego quada z załączoną do niego przyczepką">
-                      </picture>
-                </div>
-                <div class="offers__content">
-                    <h3 class="offers__title"><span class="accent-text">Transport materiałów</span> quadem z przyczepką – szybki i elastyczny sposób</h3>
-                    <p class="offers__text">Potrzebujesz transportu ziemi, drewna, gałęzi lub innych materiałów? Nasza usługa transportu  jest doskonałym wyborem! Zapewniamy sprawny i bezpieczny transport, a dzięki tej formie przewozu dotrzemy z materiałami nawet w miejsca, do których nie wjedzie większy pojazd.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="divider"></div>
-        <p class="offers__info">To tylko przykłady naszych usług – realizujemy również inne, dostosowane do <span class="accent-text">indywidualnych</span> potrzeb.</p>
-        <p class="offers__info">Masz inny pomysł lub potrzebujesz czegoś wyjątkowego? <a href="#contact" class="offers__link">Skontaktuj się</a> z nami!
-    </section>
-    <section class="about section-padding" id="about">
-        <h2 class="section-title"><span class="underline-text">co nas</span> <span class="accent-text">wyróżnia</span></h2>
-        <div class="about__box wrapper">
-            <div data-aos="zoom-in" data-aos-delay="50" class="about__info">
-                <i class="fa-solid fa-rocket about__info-icon"></i>
-                <h3 class="about__info-title">gotowość na wyzwania</h3>
-                <p class="about__info-text">Podejmujemy się zarówno standardowych, jak i nietypowych zleceń – nie boimy się nowych wyzwań!</p>
-            </div>
-            <div data-aos="zoom-in" data-aos-delay="150" class="about__info">
-                <i class="fa-solid fa-clock about__info-icon"></i>
-                <h3 class="about__info-title">terminowość</h3>
-                <p class="about__info-text">Szanujemy Twój czas – każde zlecenie wykonujemy terminowo i bez opóźnień 
-                </p>
-            </div>
-            <div data-aos="zoom-in" data-aos-delay="100" class="about__info">
-                <i class="fa-solid fa-dollar-sign about__info-icon"></i>
-                <h3 class="about__info-title">przystępne ceny</h3>
-                <p class="about__info-text">Usługi w rozsądnej cenie – uczciwa wycena każdego zlecenia.</p>
-            </div>
-            <div data-aos="zoom-in" data-aos-delay="300" class="about__info">
-                <i class="fa-solid fa-screwdriver-wrench about__info-icon"></i>
-                <h3 class="about__info-title">szeroki zakres usług</h3>
-                <p class="about__info-text">Świadczymy kompleksowe usługi ogrodnicze i budowlane, dostosowane do indywidualnych potrzeb klientów.</p>
-            </div>
-            <div data-aos="zoom-in" data-aos-delay="200" class="about__info">
-                <i class="fa-solid fa-face-smile about__info-icon"></i>
-                <h3 class="about__info-title">zadowoleni klienci</h3>
-                <p class="about__info-text">Twoja satysfakcja to nasz priorytet – dbamy o jakość i dokładność.</p>
-            </div>
-            <div data-aos="zoom-in" data-aos-delay="250" class="about__info">
-                <i class="fa-solid fa-location-dot about__info-icon"></i>
-                <h3 class="about__info-title">Mobilność i dostępność</h3>
-                <p class="about__info-text">Docieramy tam, gdzie nas potrzebujesz, niezależnie od lokalizacji.</p>
-            </div>
-        </div>
-        <div class="line"><div class="square"></div></div>
-    </section>
+        </section>
 
-<section class="gallery section-padding">
-    <h2 class="section-title"><span class="accent-text">Nasze</span> <span class="underline-text">możliwości</span></h2>
-    <div class="gallery__slider wrapper">
-        <img src="./images/slider-gallery/garden-1.jpg" width="426" height="568" alt="Obraz przedstawia drewniany domek z ładną kamienną podmurówką" class="gallery__img gallery__img-mobile">
-        <img src="./images/slider-gallery/garden-2.jpg" width="426" height="568" alt="Obrazek przedstawia własnoręcznie wykonane, drewniane pomieszczenie do przechowywania drewna" class="gallery__img gallery__img-mobile">
-        <img src="./images/slider-gallery/garden-3.jpg" width="426" height="568" alt="Obrazek przedstawia pięknie udekorowany ogród ze starannie położoną korą drzewa" class="gallery__img gallery__img-mobile">
-        <img src="./images/slider-gallery/garden-4.jpg" width="426" height="568" alt="Obrazek przedstawia jeden ze sprzętów do wykonywania usług" class="gallery__img gallery__img-mobile">
-        <img src="./images/slider-gallery/garden-5.jpg" width="426" height="568" alt="Obrazek przedstawia ogród oraz ręcznie wykonane drewniane obudowy na kosze na śmieci" class="gallery__img gallery__img-mobile">
-        <img src="./images/slider-gallery/garden-6.jpg" width="426" height="568" alt="Obrazek przedstawia drzewko otoczone placem wysypanym korą" class="gallery__img gallery__img-mobile">
-        <img src="./images/slider-gallery/garden-7.jpg" width="426" height="568" alt="Obrazek przedstawia jeden ze sprzętów do wykonywania usług" class="gallery__img gallery__img-mobile">
-        <img src="./images/slider-gallery/garden-8.jpg" width="426" height="568" alt="Obrazek przedstawia małe pola uprawne znajdujące się w własnoręcznie wykonanych drewnianych obudowach" class="gallery__img gallery__img-mobile">
-        <img src="./images/slider-gallery/garden-9.jpg" width="426" height="568" alt="Obrazek przedstawia schludnie wyglądający i solidnie wykonany kojec dla psa" class="gallery__img gallery__img-mobile">
-        <img src="./images/slider-gallery/garden-10.jpg" width="426" height="568" alt="Obrazek przedstawia rząd drzew rosnących na terenie pokrytym korą, teren ten jest obgrodzony brukowymi słupkami" class="gallery__img gallery__img-mobile">
-        <img src="./images/slider-gallery/garden-11.jpg" width="426" height="568" alt="Obrazek przedstawia pięknie wykonany plac zabaw: huśtawkę, domek, zjeżdżalnie - wszystko wykonane z drewna i tworzywa sztucznego" class="gallery__img gallery__img-mobile">
-        <img src="./images/slider-gallery/garden-12.jpg" width="426" height="568" alt="Obrazek przedstawia czerwoną maszynę do cięcia gałęzi, a w tle stos gałęzi" class="gallery__img gallery__img-mobile">
-        
-        <img src="./images/slider-gallery/garden-1-desktop.jpg" width="1536" height="700" alt="Obraz przedstawia drewniany domek z ładną kamienną podmurówką" class="gallery__img gallery__img-desktop">
-        <img src="./images/slider-gallery/garden-2-desktop.jpg" width="1536" height="700" alt="Obrazek przedstawia własnoręcznie wykonane, drewniane pomieszczenie do przechowywania drewna" class="gallery__img gallery__img-desktop">
-        <img src="./images/slider-gallery/garden-3-desktop.jpg" width="1536" height="700" alt="Obrazek przedstawia pięknie udekorowany ogród ze starannie położoną korą drzewa" class="gallery__img gallery__img-desktop">
-        <img src="./images/slider-gallery/garden-4-desktop.jpg" width="1536" height="700" alt="Obrazek przedstawia jeden ze sprzętów do wykonywania usług" class="gallery__img gallery__img-desktop">
-        <img src="./images/slider-gallery/garden-5-desktop.jpg" width="1536" height="700" alt="Obrazek przedstawia ogród oraz ręcznie wykonane drewniane obudowy na kosze na śmieci" class="gallery__img gallery__img-desktop">
-        <img src="./images/slider-gallery/garden-6-desktop.jpg" width="1536" height="700" alt="Obrazek przedstawia drzewko otoczone placem wysypanym korą" class="gallery__img gallery__img-desktop">
-        <img src="./images/slider-gallery/garden-7-desktop.jpg" width="1536" height="700" alt="Obrazek przedstawia jeden ze sprzętów do wykonywania usług" class="gallery__img gallery__img-desktop">
-        <img src="./images/slider-gallery/garden-8-desktop.jpg" width="1536" height="700" alt="Obrazek przedstawia małe pola uprawne znajdujące się w własnoręcznie wykonanych drewnianych obudowach" class="gallery__img gallery__img-desktop">
-        <img src="./images/slider-gallery/garden-9-desktop.jpg" width="1536" height="700" alt="Obrazek przedstawia schludnie wyglądający i solidnie wykonany kojec dla psa" class="gallery__img gallery__img-desktop">
-        <img src="./images/slider-gallery/garden-10-desktop.jpg" width="1536" height="700" alt="Obrazek przedstawia rząd drzew rosnących na terenie pokrytym korą, teren ten jest obgrodzony brukowymi słupkami" class="gallery__img gallery__img-desktop">
-        <img src="./images/slider-gallery/garden-11-desktop.jpg" width="1536" height="700" alt="Obrazek przedstawia pięknie wykonany plac zabaw: huśtawkę, domek, zjeżdżalnie - wszystko wykonane z drewna i tworzywa sztucznego" class="gallery__img gallery__img-desktop">
-        <img src="./images/slider-gallery/garden-12-desktop.jpg" width="1536" height="700" alt="Obrazek przedstawia czerwoną maszynę do cięcia gałęzi, a w tle stos gałęzi" class="gallery__img gallery__img-desktop">
+        <section class="gallery section-padding">
+            <h2 class="section-title"><span class="accent-text">Nasze</span> <span
+                    class="underline-text">możliwości</span></h2>
+            <div class="gallery__slider wrapper">
+                <img src="./images/slider-gallery/garden-1.jpg" width="426" height="568"
+                    alt="Obraz przedstawia drewniany domek z ładną kamienną podmurówką"
+                    class="gallery__img gallery__img-mobile">
+                <img src="./images/slider-gallery/garden-2.jpg" width="426" height="568"
+                    alt="Obrazek przedstawia własnoręcznie wykonane, drewniane pomieszczenie do przechowywania drewna"
+                    class="gallery__img gallery__img-mobile">
+                <img src="./images/slider-gallery/garden-3.jpg" width="426" height="568"
+                    alt="Obrazek przedstawia pięknie udekorowany ogród ze starannie położoną korą drzewa"
+                    class="gallery__img gallery__img-mobile">
+                <img src="./images/slider-gallery/garden-4.jpg" width="426" height="568"
+                    alt="Obrazek przedstawia jeden ze sprzętów do wykonywania usług"
+                    class="gallery__img gallery__img-mobile">
+                <img src="./images/slider-gallery/garden-5.jpg" width="426" height="568"
+                    alt="Obrazek przedstawia ogród oraz ręcznie wykonane drewniane obudowy na kosze na śmieci"
+                    class="gallery__img gallery__img-mobile">
+                <img src="./images/slider-gallery/garden-6.jpg" width="426" height="568"
+                    alt="Obrazek przedstawia drzewko otoczone placem wysypanym korą"
+                    class="gallery__img gallery__img-mobile">
+                <img src="./images/slider-gallery/garden-7.jpg" width="426" height="568"
+                    alt="Obrazek przedstawia jeden ze sprzętów do wykonywania usług"
+                    class="gallery__img gallery__img-mobile">
+                <img src="./images/slider-gallery/garden-8.jpg" width="426" height="568"
+                    alt="Obrazek przedstawia małe pola uprawne znajdujące się w własnoręcznie wykonanych drewnianych obudowach"
+                    class="gallery__img gallery__img-mobile">
+                <img src="./images/slider-gallery/garden-9.jpg" width="426" height="568"
+                    alt="Obrazek przedstawia schludnie wyglądający i solidnie wykonany kojec dla psa"
+                    class="gallery__img gallery__img-mobile">
+                <img src="./images/slider-gallery/garden-10.jpg" width="426" height="568"
+                    alt="Obrazek przedstawia rząd drzew rosnących na terenie pokrytym korą, teren ten jest obgrodzony brukowymi słupkami"
+                    class="gallery__img gallery__img-mobile">
+                <img src="./images/slider-gallery/garden-11.jpg" width="426" height="568"
+                    alt="Obrazek przedstawia pięknie wykonany plac zabaw: huśtawkę, domek, zjeżdżalnie - wszystko wykonane z drewna i tworzywa sztucznego"
+                    class="gallery__img gallery__img-mobile">
+                <img src="./images/slider-gallery/garden-12.jpg" width="426" height="568"
+                    alt="Obrazek przedstawia czerwoną maszynę do cięcia gałęzi, a w tle stos gałęzi"
+                    class="gallery__img gallery__img-mobile">
 
-    </div>
-    <div class="line"><div class="square"></div></div>
-</section>
+                <img src="./images/slider-gallery/garden-1-desktop.jpg" width="1536" height="700"
+                    alt="Obraz przedstawia drewniany domek z ładną kamienną podmurówką"
+                    class="gallery__img gallery__img-desktop">
+                <img src="./images/slider-gallery/garden-2-desktop.jpg" width="1536" height="700"
+                    alt="Obrazek przedstawia własnoręcznie wykonane, drewniane pomieszczenie do przechowywania drewna"
+                    class="gallery__img gallery__img-desktop">
+                <img src="./images/slider-gallery/garden-3-desktop.jpg" width="1536" height="700"
+                    alt="Obrazek przedstawia pięknie udekorowany ogród ze starannie położoną korą drzewa"
+                    class="gallery__img gallery__img-desktop">
+                <img src="./images/slider-gallery/garden-4-desktop.jpg" width="1536" height="700"
+                    alt="Obrazek przedstawia jeden ze sprzętów do wykonywania usług"
+                    class="gallery__img gallery__img-desktop">
+                <img src="./images/slider-gallery/garden-5-desktop.jpg" width="1536" height="700"
+                    alt="Obrazek przedstawia ogród oraz ręcznie wykonane drewniane obudowy na kosze na śmieci"
+                    class="gallery__img gallery__img-desktop">
+                <img src="./images/slider-gallery/garden-6-desktop.jpg" width="1536" height="700"
+                    alt="Obrazek przedstawia drzewko otoczone placem wysypanym korą"
+                    class="gallery__img gallery__img-desktop">
+                <img src="./images/slider-gallery/garden-7-desktop.jpg" width="1536" height="700"
+                    alt="Obrazek przedstawia jeden ze sprzętów do wykonywania usług"
+                    class="gallery__img gallery__img-desktop">
+                <img src="./images/slider-gallery/garden-8-desktop.jpg" width="1536" height="700"
+                    alt="Obrazek przedstawia małe pola uprawne znajdujące się w własnoręcznie wykonanych drewnianych obudowach"
+                    class="gallery__img gallery__img-desktop">
+                <img src="./images/slider-gallery/garden-9-desktop.jpg" width="1536" height="700"
+                    alt="Obrazek przedstawia schludnie wyglądający i solidnie wykonany kojec dla psa"
+                    class="gallery__img gallery__img-desktop">
+                <img src="./images/slider-gallery/garden-10-desktop.jpg" width="1536" height="700"
+                    alt="Obrazek przedstawia rząd drzew rosnących na terenie pokrytym korą, teren ten jest obgrodzony brukowymi słupkami"
+                    class="gallery__img gallery__img-desktop">
+                <img src="./images/slider-gallery/garden-11-desktop.jpg" width="1536" height="700"
+                    alt="Obrazek przedstawia pięknie wykonany plac zabaw: huśtawkę, domek, zjeżdżalnie - wszystko wykonane z drewna i tworzywa sztucznego"
+                    class="gallery__img gallery__img-desktop">
+                <img src="./images/slider-gallery/garden-12-desktop.jpg" width="1536" height="700"
+                    alt="Obrazek przedstawia czerwoną maszynę do cięcia gałęzi, a w tle stos gałęzi"
+                    class="gallery__img gallery__img-desktop">
 
-<section class="contact section-padding" id="contact">
-    <h2 class="section-title"><span class="accent-text">Skontaktuj się</span> <span class="underline-text">z nami</span></h2>
-    <div class="contact__box wrapper">
-        <div class="contact__box-info">
-            <span class="contact__box-title">numer telefonu:</span>
-            <a href="tel:+48698479042" class="contact__box-data">+48 698 479 042</a>
-        </div>
-        <div class="divider"></div>
-        <div class="contact__box-info">
-            <span class="contact__box-title">adres e-mail:</span>
-            <a href="mailto:maciekwojak1@gmail.com" class="contact__box-data">maciekwojak1@gmail.com</a>
-        </div>
-        <div class="divider"></div>
-        <div class="contact__box-info">
-            <span class="contact__box-title">znajdziesz nas również:</span>
-            <a target="_blank" href="https://www.facebook.com/maciekwojak32?locale=pl_PL" class="contact__box-icon" aria-label="Facebook"><i class="fa-brands fa-square-facebook"></i></a>
-    </div>
-</section>
-</main>
-<footer class="footer">
-    <p class="footer__text">&copy; <span class="footer__year"></span> Garden Care</p>
-    <p class="footer__text">Wszelkie prawa zastrzeżone</p>
-</footer>
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script src="./js/aos.js"></script>
-<script src="./js/main.js"></script>
+            </div>
+            <div class="line">
+                <div class="square"></div>
+            </div>
+        </section>
+
+        <section class="contact section-padding" id="contact">
+            <h2 class="section-title"><span class="accent-text">Skontaktuj się</span> <span class="underline-text">z
+                    nami</span></h2>
+            <div class="contact__box wrapper">
+                <div class="contact__box-info">
+                    <span class="contact__box-title">numer telefonu:</span>
+                    <a href="tel:+48698479042" class="contact__box-data">+48 698 479 042</a>
+                </div>
+                <div class="divider"></div>
+                <div class="contact__box-info">
+                    <span class="contact__box-title">adres e-mail:</span>
+                    <a href="mailto:maciekwojak1@gmail.com" class="contact__box-data">maciekwojak1@gmail.com</a>
+                </div>
+                <div class="divider"></div>
+                <div class="contact__box-info">
+                    <span class="contact__box-title">znajdziesz nas również:</span>
+                    <a target="_blank" href="https://www.facebook.com/maciekwojak32?locale=pl_PL"
+                        class="contact__box-icon" aria-label="Facebook"><i class="fa-brands fa-square-facebook"></i></a>
+                </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <p class="footer__text">&copy; <span class="footer__year"></span> Garden Care</p>
+        <p class="footer__text">Wszelkie prawa zastrzeżone</p>
+    </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="./js/aos.js"></script>
+    <script src="./js/main.js"></script>
 </body>
+
 </html>

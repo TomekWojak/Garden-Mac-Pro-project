@@ -118,7 +118,8 @@
   transform: translateY(-50%);
 }
 
-.sun, .moon {
+.sun,
+.moon {
   pointer-events: none;
   transition: stroke 0.3s, transform 0.2s;
 }
@@ -243,7 +244,8 @@
   }
 }
 @media (min-width: 700px) {
-  .mode-switcher:hover + .tooltip, .mode-switcher:hover + .tooltip::before {
+  .mode-switcher:hover + .tooltip,
+  .mode-switcher:hover + .tooltip::before {
     display: block;
     animation: tooltipVisible 0.2s 0.2s forwards;
   }
@@ -317,7 +319,9 @@
     min-width: 25px;
   }
 }
-*, *::after, *::before {
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -325,14 +329,14 @@
 
 :root {
   --textColor: #000;
-  --accentColor: #D32F2F;
+  --accentColor: #d32f2f;
   --modeColor: #fff;
   --lightGray: #555555;
   --pureBlack: #000;
   --offersBg: #fbfaf6;
-  --galleryBg: #F2F2F2;
-  --aboutBg: linear-gradient(to bottom, #DCE4E8 0%, #E1E1E1 100%);
-  --contactBg: #F0F0F0;
+  --galleryBg: #f2f2f2;
+  --aboutBg: linear-gradient(to bottom, #dce4e8 0%, #e1e1e1 100%);
+  --contactBg: #f0f0f0;
   --mainFont: "Oswald", sans-serif;
   --secondaryFont: "Roboto", sans-serif;
 }
@@ -724,8 +728,8 @@ img {
 .offers__img--mowing {
   background-image: url("../images/mowing-blurred.jpg");
 }
-.offers__img--rake {
-  background-image: url("../images/rake-blurred.jpg");
+.offers__img--cleaningLeaves {
+  background-image: url("../images/cleaning-leaves-blurred.jpg");
 }
 .offers__img--wood {
   background-image: url("../images/wood-work-blurred.jpg");
@@ -1198,11 +1202,11 @@ img {
     transition: color 0.3s;
   }
   .contact__box-icon:hover {
-    color: #1E90FF;
+    color: #1e90ff;
   }
   .contact__box-icon:focus-visible {
     outline: none;
-    color: #1E90FF;
+    color: #1e90ff;
   }
   .contact__box-icon:hover::before, .contact__box-icon:hover::after {
     display: flex;
@@ -1221,7 +1225,7 @@ img {
     width: 90px;
     height: 30px;
     opacity: 0;
-    background-color: #1E90FF;
+    background-color: #1e90ff;
     font-size: 1.2rem;
     font-family: var(--secondaryFont);
     color: #fff;
@@ -1241,7 +1245,7 @@ img {
     opacity: 0;
     border-left: 6px solid transparent;
     border-right: 6px solid transparent;
-    border-bottom: 12px solid #1E90FF;
+    border-bottom: 12px solid #1e90ff;
     pointer-events: none;
   }
 }
