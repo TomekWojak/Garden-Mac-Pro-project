@@ -510,6 +510,7 @@ img {
 		position: relative;
 		box-shadow: 3px 3px 10px #2e2e2e2e;
 		border: 10px solid #fff;
+		overflow: hidden;
 
 		&:hover .gallery__icon {
 			opacity: 0.8;

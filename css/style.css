@@ -833,6 +833,7 @@ img {
   position: relative;
   box-shadow: 3px 3px 10px rgba(46, 46, 46, 0.1803921569);
   border: 10px solid #fff;
+  overflow: hidden;
 }
 .gallery__slider:hover .gallery__icon {
   opacity: 0.8;
