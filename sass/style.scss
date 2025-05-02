@@ -86,6 +86,9 @@ img {
 	width: 100%;
 	max-width: 1200px;
 }
+.logo-desktop {
+	display: none;
+}
 .nav {
 	position: sticky;
 	width: 100%;
@@ -96,14 +99,14 @@ img {
 	z-index: 1000;
 	&.shrink .nav__logo img {
 		width: 140px;
-		height: 35px;
+		height: 27px;
 		transition: width 0.2s, height 0.2s;
 	}
 	&.shrink .nav__desktop-link {
 		font-size: 1.4rem;
 	}
 	&.shrink .nav__desktop {
-		margin-inline-start: -2em;
+		margin-inline-start: 0;
 	}
 	.wrapper {
 		display: flex;
@@ -664,6 +667,13 @@ img {
 }
 
 @media (min-width: 700px) {
+	.logo-mobile {
+		display: none;
+	}
+	.logo-desktop {
+		margin-block-start: 0.5em;
+		display: block;
+	}
 	.nav {
 		padding: 0 1em;
 		.wrapper {

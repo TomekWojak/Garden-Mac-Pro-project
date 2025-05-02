@@ -406,6 +406,10 @@ img {
   max-width: 1200px;
 }
 
+.logo-desktop {
+  display: none;
+}
+
 .nav {
   position: sticky;
   width: 100%;
@@ -417,14 +421,14 @@ img {
 }
 .nav.shrink .nav__logo img {
   width: 140px;
-  height: 35px;
+  height: 27px;
   transition: width 0.2s, height 0.2s;
 }
 .nav.shrink .nav__desktop-link {
   font-size: 1.4rem;
 }
 .nav.shrink .nav__desktop {
-  margin-inline-start: -2em;
+  margin-inline-start: 0;
 }
 .nav .wrapper {
   display: flex;
@@ -964,6 +968,13 @@ img {
   }
 }
 @media (min-width: 700px) {
+  .logo-mobile {
+    display: none;
+  }
+  .logo-desktop {
+    margin-block-start: 0.5em;
+    display: block;
+  }
   .nav {
     padding: 0 1em;
   }
