@@ -90,19 +90,20 @@ img {
 	position: sticky;
 	width: 100%;
 	top: 0;
-	padding: 1em;
+	padding: 1.5em 1em 0.8em;
 	background-color: var(--modeColor);
 	box-shadow: 5px 5px 10px #2e2e2e13;
 	z-index: 1000;
 	&.shrink .nav__logo img {
-		width: 100px;
-		height: 36px;
+		width: 140px;
+		height: 35px;
 		transition: width 0.2s, height 0.2s;
 	}
 	&.shrink .nav__desktop-link {
-		padding: 1em 2em;
-		font-size: 1.5rem;
-		transition: padding 0.2s, color 0.3s;
+		font-size: 1.4rem;
+	}
+	&.shrink .nav__desktop {
+		margin-inline-start: -2em;
 	}
 	.wrapper {
 		display: flex;
@@ -671,9 +672,6 @@ img {
 		&__logo img {
 			transition: height 0.1s, width 0.1s;
 		}
-		&__desktop-link {
-			transition: padding 0.1s, color 0.3s;
-		}
 		&__toggle-btn {
 			display: none;
 		}
@@ -685,17 +683,18 @@ img {
 			display: flex;
 			align-items: center;
 			list-style-type: none;
+			transition: margin 0.3s;
 		}
 		&__desktop-link {
 			position: relative;
 			display: inline-block;
-			padding: 1em 2em;
+			padding: 0.8em 2em 1.2em;
 			font-size: 2rem;
 			text-decoration: none;
 			color: var(--textColor);
 			font-weight: 300;
 			letter-spacing: 2px;
-			transition: color 0.3s;
+			transition: padding 0.1s, color 0.3s;
 
 			&:hover,
 			&:focus-visible {
@@ -1039,6 +1038,12 @@ img {
 }
 
 @media (min-width: 992px) {
+	.nav {
+		&__logo {
+			width: 180px;
+			height: 38px;
+		}
+	}
 	.header {
 		&__title {
 			font-size: 4.4rem;
@@ -1121,8 +1126,11 @@ img {
 		}
 	}
 	.gallery {
+		&__slider {
+			width: 80%;
+		}
 		&__img {
-			max-height: 700px;
+			max-height: 630px;
 		}
 	}
 	.contact {

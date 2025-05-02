@@ -213,17 +213,16 @@
   height: 4px;
   left: 0;
   background-color: var(--lightGray);
-  border-radius: 30px;
 }
 .nav__toggle-bar--top {
-  top: 8px;
+  top: 0;
 }
 .nav__toggle-bar--middle {
-  top: 21px;
+  top: 13px;
   transition: opacity 0.3s;
 }
 .nav__toggle-bar--bottom {
-  top: 34px;
+  top: 26px;
 }
 
 .nav__toggle-btn[aria-expanded=true] .nav__toggle-bar--top {
@@ -411,20 +410,21 @@ img {
   position: sticky;
   width: 100%;
   top: 0;
-  padding: 1em;
+  padding: 1.5em 1em 0.8em;
   background-color: var(--modeColor);
   box-shadow: 5px 5px 10px rgba(46, 46, 46, 0.0745098039);
   z-index: 1000;
 }
 .nav.shrink .nav__logo img {
-  width: 100px;
-  height: 36px;
+  width: 140px;
+  height: 35px;
   transition: width 0.2s, height 0.2s;
 }
 .nav.shrink .nav__desktop-link {
-  padding: 1em 2em;
-  font-size: 1.5rem;
-  transition: padding 0.2s, color 0.3s;
+  font-size: 1.4rem;
+}
+.nav.shrink .nav__desktop {
+  margin-inline-start: -2em;
 }
 .nav .wrapper {
   display: flex;
@@ -973,9 +973,6 @@ img {
   .nav__logo img {
     transition: height 0.1s, width 0.1s;
   }
-  .nav__desktop-link {
-    transition: padding 0.1s, color 0.3s;
-  }
   .nav__toggle-btn {
     display: none;
   }
@@ -987,17 +984,18 @@ img {
     display: flex;
     align-items: center;
     list-style-type: none;
+    transition: margin 0.3s;
   }
   .nav__desktop-link {
     position: relative;
     display: inline-block;
-    padding: 1em 2em;
+    padding: 0.8em 2em 1.2em;
     font-size: 2rem;
     text-decoration: none;
     color: var(--textColor);
     font-weight: 300;
     letter-spacing: 2px;
-    transition: color 0.3s;
+    transition: padding 0.1s, color 0.3s;
   }
   .nav__desktop-link:hover, .nav__desktop-link:focus-visible {
     color: var(--accentColor);
@@ -1298,6 +1296,10 @@ img {
   }
 }
 @media (min-width: 992px) {
+  .nav__logo {
+    width: 180px;
+    height: 38px;
+  }
   .header__title {
     font-size: 4.4rem;
     line-height: 160%;
@@ -1370,8 +1372,11 @@ img {
   .offers__img img {
     transition: transform 0.3s;
   }
+  .gallery__slider {
+    width: 80%;
+  }
   .gallery__img {
-    max-height: 700px;
+    max-height: 630px;
   }
   .contact__box-title, .contact__box-data {
     font-size: 2.4rem;

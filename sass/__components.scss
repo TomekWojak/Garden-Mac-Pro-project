@@ -135,16 +135,16 @@
 	height: 4px;
 	left: 0;
 	background-color: var(--lightGray);
-	border-radius: 30px;
+
 	&--top {
-		top: 8px;
+		top: 0;
 	}
 	&--middle {
-		top: 21px;
+		top: 13px;
 		transition: opacity 0.3s;
 	}
 	&--bottom {
-		top: 34px;
+		top: 26px;
 	}
 }
 .nav__toggle-btn[aria-expanded="true"] .nav__toggle-bar--top {
