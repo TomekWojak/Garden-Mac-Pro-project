@@ -115,7 +115,7 @@
 	position: relative;
 	display: block;
 	height: 40px;
-	width: 40px;
+	width: 35px;
 	background: none;
 	border: none;
 	cursor: pointer;
@@ -137,14 +137,14 @@
 	background-color: var(--lightGray);
 
 	&--top {
-		top: 0;
+		top: 6px;
 	}
 	&--middle {
-		top: 13px;
+		top: 17px;
 		transition: opacity 0.3s;
 	}
 	&--bottom {
-		top: 26px;
+		top: 28px;
 	}
 }
 .nav__toggle-btn[aria-expanded="true"] .nav__toggle-bar--top {

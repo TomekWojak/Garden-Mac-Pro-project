@@ -3,10 +3,10 @@
     transform: translateY(0) rotate(0);
   }
   50% {
-    transform: translateY(13px) rotate(0);
+    transform: translateY(11px) rotate(0);
   }
   100% {
-    transform: translateY(13px) rotate(225deg);
+    transform: translateY(11px) rotate(225deg);
   }
 }
 @keyframes bottomOpenAnimation {
@@ -14,18 +14,18 @@
     transform: translateY(0) rotate(0);
   }
   50% {
-    transform: translateY(-13px) rotate(0);
+    transform: translateY(-11px) rotate(0);
   }
   100% {
-    transform: translateY(-13px) rotate(-225deg);
+    transform: translateY(-11px) rotate(-225deg);
   }
 }
 @keyframes topCloseAnimation {
   0% {
-    transform: translateY(13px) rotate(225deg);
+    transform: translateY(11px) rotate(225deg);
   }
   50% {
-    transform: translateY(13px) rotate(0);
+    transform: translateY(11px) rotate(0);
   }
   100% {
     transform: translateY(0) rotate(0);
@@ -33,10 +33,10 @@
 }
 @keyframes bottomCloseAnimation {
   0% {
-    transform: translateY(-13px) rotate(-225deg);
+    transform: translateY(-11px) rotate(-225deg);
   }
   50% {
-    transform: translateY(-13px) rotate(0);
+    transform: translateY(-11px) rotate(0);
   }
   100% {
     transform: translateY(0) rotate(0);
@@ -192,7 +192,7 @@
   position: relative;
   display: block;
   height: 40px;
-  width: 40px;
+  width: 35px;
   background: none;
   border: none;
   cursor: pointer;
@@ -215,14 +215,14 @@
   background-color: var(--lightGray);
 }
 .nav__toggle-bar--top {
-  top: 0;
+  top: 6px;
 }
 .nav__toggle-bar--middle {
-  top: 13px;
+  top: 17px;
   transition: opacity 0.3s;
 }
 .nav__toggle-bar--bottom {
-  top: 26px;
+  top: 28px;
 }
 
 .nav__toggle-btn[aria-expanded=true] .nav__toggle-bar--top {
