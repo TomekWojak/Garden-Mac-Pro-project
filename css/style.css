@@ -714,7 +714,7 @@ img {
 .offers__img {
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 5px 5px 10px rgba(46, 46, 46, 0.1803921569);
+  box-shadow: 0 0 10px rgba(46, 46, 46, 0.1803921569);
   position: relative;
   background-size: cover;
   background-position: center;

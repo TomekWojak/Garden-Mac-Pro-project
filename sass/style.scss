@@ -387,7 +387,7 @@ img {
 	&__img {
 		border-radius: 10px;
 		overflow: hidden;
-		box-shadow: 5px 5px 10px #2e2e2e2e;
+		box-shadow: 0 0 10px #2e2e2e2e;
 		@include bgProperties;
 
 		&::before {
