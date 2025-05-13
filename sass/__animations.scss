@@ -1,45 +1,45 @@
 @keyframes topOpenAnimation {
 	0% {
-		transform: translateY(0) rotate(0);
+		transform: translateY(0) translateX(-50%) rotate(0);
 	}
 	50% {
-		transform: translateY(11px) rotate(0);
+		transform: translateY(9px) translateX(-50%) rotate(0);
 	}
 	100% {
-		transform: translateY(11px) rotate(225deg);
+		transform: translateY(9px) translateX(-50%) rotate(225deg);
 	}
 }
 @keyframes bottomOpenAnimation {
 	0% {
-		transform: translateY(0) rotate(0);
+		transform: translateY(0) translateX(-50%) rotate(0);
 	}
 	50% {
-		transform: translateY(-11px) rotate(0);
+		transform: translateY(-9px) translateX(-50%) rotate(0);
 	}
 	100% {
-		transform: translateY(-11px) rotate(-225deg);
+		transform: translateY(-9px) translateX(-50%) rotate(-225deg);
 	}
 }
 @keyframes topCloseAnimation {
 	0% {
-		transform: translateY(11px) rotate(225deg);
+		transform: translateY(9px) translateX(-50%) rotate(225deg);
 	}
 	50% {
-		transform: translateY(11px) rotate(0);
+		transform: translateY(9px) translateX(-50%) rotate(0);
 	}
 	100% {
-		transform: translateY(0) rotate(0);
+		transform: translateY(0) translateX(-50%) rotate(0);
 	}
 }
 @keyframes bottomCloseAnimation {
 	0% {
-		transform: translateY(-11px) rotate(-225deg);
+		transform: translateY(-9px) translateX(-50%) rotate(-225deg);
 	}
 	50% {
-		transform: translateY(-11px) rotate(0);
+		transform: translateY(-9px) translateX(-50%) rotate(0);
 	}
 	100% {
-		transform: translateY(0) rotate(0);
+		transform: translateY(0) translateX(-50%) rotate(0);
 	}
 }
 @keyframes slideLeft {

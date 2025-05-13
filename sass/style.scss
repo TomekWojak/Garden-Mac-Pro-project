@@ -86,20 +86,17 @@ img {
 	width: 100%;
 	max-width: 1200px;
 }
-.logo-desktop {
-	display: none;
-}
+
 .nav {
 	position: sticky;
 	width: 100%;
 	top: 0;
-	padding: 1.5em 1em 0.8em;
+	padding: 0.6em 1em;
 	background-color: var(--modeColor);
-	box-shadow: 5px 5px 10px #2e2e2e13;
+	box-shadow: 0 0 10px #2e2e2e90;
 	z-index: 1000;
 	&.shrink .nav__logo img {
-		width: 140px;
-		height: 27px;
+		width: 50px;
 		transition: width 0.2s, height 0.2s;
 	}
 	&.shrink .nav__desktop-link {
@@ -115,9 +112,10 @@ img {
 	}
 	&__logo {
 		text-decoration: none;
+		width: fit-content;
 		img {
-			aspect-ratio: 1;
-			background-color: var(--modeColor);
+			width: 60px;
+			height: auto;
 		}
 	}
 	&__desktop {
@@ -129,7 +127,7 @@ img {
 		height: 100vh;
 		inset-inline: 0;
 		bottom: 0;
-		top: 6em;
+		top: 5em;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
@@ -138,7 +136,6 @@ img {
 		list-style-type: none;
 		z-index: -1;
 		transform: translateX(105%);
-		background-color: rgba(255, 255, 255, 11);
 		transition: transform 0.4s, visibility 0.4s;
 		visibility: hidden;
 		&.collapsed {
@@ -304,7 +301,7 @@ img {
 	}
 	&__img {
 		margin-block-end: 4em;
-		filter: drop-shadow(5px 5px 10px #2e2e2e2e);
+		filter: drop-shadow(5px 5px 10px #2e2e2e4d);
 		background-image: url("../images/services-img-blurred.jpg");
 		@include bgProperties;
 		&::before {
@@ -377,6 +374,7 @@ img {
 	}
 	&__offer {
 		margin: 10em 0;
+
 		&:first-child {
 			margin: 0;
 		}
@@ -387,7 +385,7 @@ img {
 	&__img {
 		border-radius: 10px;
 		overflow: hidden;
-		box-shadow: 0 0 10px #2e2e2e2e;
+		box-shadow: 0 0 10px #2e2e2e53;
 		@include bgProperties;
 
 		&::before {
@@ -512,7 +510,7 @@ img {
 	}
 	&__slider {
 		position: relative;
-		box-shadow: 3px 3px 10px #2e2e2e2e;
+		box-shadow: 0 0 10px #2e2e2e34;
 		border: 10px solid #fff;
 		overflow: hidden;
 
@@ -602,7 +600,7 @@ img {
 			bottom: 0;
 			right: 0;
 			left: initial;
-			box-shadow: 5px 5px 10px #2e2e2e2e;
+			box-shadow: 0 0 10px #2e2e2e73;
 		}
 	}
 	.services {
@@ -667,19 +665,12 @@ img {
 }
 
 @media (min-width: 700px) {
-	.logo-mobile {
-		display: none;
-	}
-	.logo-desktop {
-		margin-block-start: 0.5em;
-		display: block;
-	}
 	.nav {
-		padding: 0 1em;
 		.wrapper {
 			justify-content: flex-start;
 		}
 		&__logo img {
+			width: 75px;
 			transition: height 0.1s, width 0.1s;
 		}
 		&__toggle-btn {
@@ -698,7 +689,7 @@ img {
 		&__desktop-link {
 			position: relative;
 			display: inline-block;
-			padding: 0.8em 2em 1.2em;
+			padding: 0.7em 1.4em;
 			font-size: 2rem;
 			text-decoration: none;
 			color: var(--textColor);
@@ -1050,8 +1041,12 @@ img {
 @media (min-width: 992px) {
 	.nav {
 		&__logo {
-			width: 180px;
-			height: 38px;
+			img {
+				width: 85px;
+			}
+		}
+		&__desktop {
+			margin-inline-start: 4em;
 		}
 	}
 	.header {
