@@ -6,13 +6,14 @@ document.addEventListener("DOMContentLoaded", function () {
 	const nav = document.querySelector(".nav");
 	const modeSwitcherMobile = document.querySelector(".mode-switcher-mobile");
 	const modeSwitcherDesktop = document.querySelector(".mode-switcher-desktop");
-	const tooltipText = document.querySelector(".tooltip-text");
 	const slider = document.querySelector(".gallery__slider");
 	const mobileImages = document.querySelectorAll(".gallery__img-mobile");
 	const desktopImages = document.querySelectorAll(".gallery__img-desktop");
+	const carousellBtn = document.querySelector(".carousell-btn");
 
 	const carousellSpeed = 4000;
 	let index = 0;
+	let intervalID;
 
 	if (window.innerWidth <= 700) {
 		mobileImages[0].classList.add("active");
@@ -49,23 +50,9 @@ document.addEventListener("DOMContentLoaded", function () {
 		modeSwitcherMobile.classList.toggle("dark");
 		document.body.classList.toggle("dark");
 		modeSwitcherDesktop.classList.toggle("dark");
-		changeTooltipContent();
 
 		const isDark = document.body.classList.contains("dark");
 		localStorage.setItem("dark-mode", isDark ? "true" : "false");
-	};
-
-	const changeTooltipContent = () => {
-		if (
-			modeSwitcherDesktop.classList.contains("dark") ||
-			document.body.classList.contains("dark")
-		) {
-			tooltipText.textContent = "Tryb nocny";
-			tooltipText.style.color = "#000";
-		} else {
-			tooltipText.textContent = "Tryb dzienny";
-			tooltipText.style.color = "#fff";
-		}
 	};
 
 	navbarToggler.addEventListener("click", () => {
@@ -128,13 +115,36 @@ document.addEventListener("DOMContentLoaded", function () {
 		const year = new Date().getFullYear();
 		footerYear.innerText = year;
 	};
+	const pauseCarousell = () => {
+		clearInterval(intervalID);
+	};
 
-	setInterval(showNextImg, carousellSpeed);
+	const playCarousell = () => {
+		intervalID = setInterval(showNextImg, carousellSpeed);
+	};
 
+	const handleCarousell = () => {
+		const playCarousellIcon = '<i class="fa-solid fa-play"></i>';
+		const pauseCarousellIcon = '<i class="fa-solid fa-pause"></i>';
+
+		if (carousellBtn.classList.contains("play")) {
+			playCarousell();
+			carousellBtn.innerHTML = pauseCarousellIcon;
+			carousellBtn.classList.remove("play");
+		} else {
+			pauseCarousell();
+			carousellBtn.innerHTML = playCarousellIcon;
+			carousellBtn.classList.add("play");
+		}
+	};
+
+	playCarousell();
 	handleCurrentYear();
-	window.addEventListener("scroll", handleNav);
+
+	carousellBtn.addEventListener("click", handleCarousell);
 	modeSwitcherMobile.addEventListener("click", changeMode);
 	modeSwitcherDesktop.addEventListener("click", changeMode);
+	window.addEventListener("scroll", handleNav);
 	window.addEventListener("DOMContentLoaded", () => {
 		const darkMode = localStorage.getItem("dark-mode");
 		if (darkMode === "true") {
@@ -142,6 +152,5 @@ document.addEventListener("DOMContentLoaded", function () {
 			modeSwitcherDesktop.classList.add("dark");
 			modeSwitcherMobile.classList.add("dark");
 		}
-		changeTooltipContent();
 	});
 });

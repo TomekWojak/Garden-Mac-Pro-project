@@ -93,7 +93,7 @@ img {
 	top: 0;
 	padding: 0.6em 1em;
 	background-color: var(--modeColor);
-	box-shadow: 0 0 10px #2e2e2e90;
+	box-shadow: 0 0 10px #2e2e2e9a;
 	z-index: 1000;
 	&.shrink .nav__logo img {
 		width: 50px;
@@ -246,7 +246,7 @@ img {
 		text-decoration: none;
 		background-color: var(--accentColor);
 		border-radius: 30px;
-		color: var(--modeColor);
+		color: #fff;
 		border: 2px solid transparent;
 		letter-spacing: 2px;
 		font-weight: 500;
@@ -254,8 +254,7 @@ img {
 		text-transform: uppercase;
 		filter: drop-shadow(5px 5px 10px #2e2e2e2e);
 		text-shadow: 3px 3px 5px #2e2e2e2e;
-		transition: background 0.3s, border 0.3s, opacity 0.6s 0.6s ease,
-			transform 0.6s 0.6s ease !important;
+		transition: background 0.3s, border 0.3s;
 		&:hover,
 		&:focus-visible {
 			background: none;
@@ -473,7 +472,7 @@ img {
 	text-align: center;
 	position: relative;
 	&.section-padding {
-		padding: 8em 2em 18em;
+		padding: 8em 2em 12em;
 	}
 	&__info {
 		margin: 5em 0;
@@ -730,6 +729,7 @@ img {
 		}
 		&__btn {
 			margin: 2em 0 0;
+			transition: opacity 0.6s 0.6s ease, transform 0.6s 0.6s ease !important;
 		}
 	}
 	.services {
