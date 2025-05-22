@@ -69,3 +69,49 @@
 		opacity: 1;
 	}
 }
+
+@keyframes shine {
+	0% {
+		left: -10%;
+	}
+	25% {
+		left: 100%;
+	}
+	50% {
+		left: 100%;
+	}
+	75% {
+		left: 100%;
+	}
+	100% {
+		left: 100%;
+	}
+}
+@keyframes shineImg {
+	0% {
+		left: -50%;
+	}
+	25% {
+		left: 150%;
+	}
+	50% {
+		left: 150%;
+	}
+	75% {
+		left: 150%;
+	}
+	100% {
+		left: 150%;
+	}
+}
+
+@keyframes opacity {
+	from {
+		opacity: 0.5;
+		transform: scale(0.98);
+	}
+	to {
+		opacity: 0.2;
+		transform: scale(1);
+	}
+}

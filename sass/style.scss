@@ -102,9 +102,7 @@ img {
 	&.shrink .nav__desktop-link {
 		font-size: 1.4rem;
 	}
-	&.shrink .nav__desktop {
-		margin-inline-start: 0;
-	}
+
 	.wrapper {
 		display: flex;
 		justify-content: space-between;
@@ -548,6 +546,19 @@ img {
 		flex-direction: column;
 		align-items: center;
 	}
+	.fa-map-location-dot {
+		margin: 0 auto 0.5em;
+		font-size: 2rem;
+	}
+	&__box-text {
+		width: 100%;
+		text-align: center;
+		margin-block-start: 0.5em;
+		font-size: 2rem;
+		font-weight: 350;
+		letter-spacing: 1px;
+	}
+
 	&__box-title,
 	&__box-data {
 		font-size: 2.1rem;
@@ -648,6 +659,15 @@ img {
 		&__box-icon {
 			font-size: 2.6rem;
 		}
+		.fa-map-location-dot {
+			font-size: 2.4rem;
+		}
+		&__box-text {
+			margin-block-start: 0.5em;
+			font-size: 2.3rem;
+			font-weight: 350;
+			letter-spacing: 1px;
+		}
 	}
 
 	.about {
@@ -729,7 +749,8 @@ img {
 		}
 		&__btn {
 			margin: 2em 0 0;
-			transition: opacity 0.6s 0.6s ease, transform 0.6s 0.6s ease !important;
+			transition: background 0.3s, border 0.3s, opacity 0.6s 0.6s ease,
+				transform 0.6s 0.6s ease !important;
 		}
 	}
 	.services {
@@ -791,6 +812,11 @@ img {
 		&__img {
 			min-height: 600px;
 			max-height: 600px;
+		}
+	}
+	.contact {
+		&.section-padding {
+			padding: 10em 2em 5em;
 		}
 	}
 }
@@ -916,6 +942,19 @@ img {
 		&__box-title,
 		&__box-data {
 			font-size: 1.8rem;
+		}
+		.fa-map-location-dot {
+			margin: 3em auto 0.5em;
+			font-size: 2rem;
+		}
+		.divider:last-child {
+			display: none;
+		}
+		&__box-text {
+			margin-block-start: 0.5em;
+			font-size: 2rem;
+			font-weight: 350;
+			letter-spacing: 1px;
 		}
 		&__box-icon {
 			position: relative;
@@ -1145,6 +1184,13 @@ img {
 		}
 		&__box-icon {
 			font-size: 2.9rem;
+		}
+		.fa-map-location-dot {
+			margin: 4em auto 0.5em;
+			font-size: 2.5rem;
+		}
+		&__box-text {
+			font-size: 2.3rem;
 		}
 	}
 	.about {

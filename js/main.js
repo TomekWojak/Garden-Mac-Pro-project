@@ -21,6 +21,27 @@ document.addEventListener("DOMContentLoaded", function () {
 		desktopImages[0].classList.add("active");
 	}
 
+	function loadScript(src) {
+		return new Promise((resolve, reject) => {
+			const script = document.createElement("script");
+			script.src = src;
+			script.onload = resolve;
+			script.onerror = () =>
+				reject(new Error(`Nie udało się załadować ${src}`));
+			document.body.append(script);
+		});
+	}
+
+	loadScript("https://unpkg.com/aos@next/dist/aos.js")
+		.then(() => loadScript("./js/aos.js"))
+		.then(() => {
+			document.querySelector(".box-loading").classList.add("hidden");
+		})
+		.catch((err) => {
+			console.error(err);
+			document.querySelector(".box-loading").classList.add("hidden");
+		});
+
 	const showNextImg = () => {
 		if (window.innerWidth <= 700) {
 			desktopImages.forEach((img) => img.classList.remove("active"));
