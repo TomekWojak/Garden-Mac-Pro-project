@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	}
 
 	loadScript("https://unpkg.com/aos@next/dist/aos.js")
-		.then(() => loadScript("./js/aos.js"))
+		.then(() => loadScript("dist/js/aos.min.js"))
 		.then(() => {
 			document.querySelector(".box-loading").classList.add("hidden");
 		})
